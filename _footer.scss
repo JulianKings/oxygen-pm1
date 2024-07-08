@@ -1,0 +1,42 @@
+@use 'variables' as *;
+
+.footer {
+    background-color: #F7F7F7;
+    box-shadow: 0 -5px 40px rgb(0, 0, 0, 0.2);
+    padding: 1.15rem 1.95rem;
+    margin-top: 1.4rem;
+    width: 100%;
+
+    &__desc {
+        display: inline-block;
+        vertical-align: middle;
+        width: 65%;
+
+        &__title {
+            font-size: 1.6rem;
+            font-weight: 300;
+            line-height: 30px;
+            color: #08A6E4;
+        }
+
+        &__caption {
+            font-family: $open-sans;
+            font-size: 0.7rem;
+            line-height: 14px;
+            font-weight: 400;
+            color: #a5a5a5;
+            margin-top: 0.2rem;
+        }
+    }
+
+    &__images {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: center;
+        width: 30%;
+    }
+
+    &__images img {
+        margin: 0 0.2rem;
+    }
+}

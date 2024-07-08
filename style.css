@@ -334,4 +334,132 @@ body {
   list-style: url("./assets/Cross.png");
 }
 
+.question {
+  width: 100%;
+  padding: 1.15rem 1.95rem;
+}
+.question__title {
+  font-size: 2.45rem;
+  font-weight: 400;
+  line-height: 41px;
+  margin-bottom: 0.2rem;
+}
+.question__desc {
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Open Sans", "offline_open_sans", "Roboto", sans-serif;
+  line-height: 22px;
+  margin-bottom: 1.2rem;
+}
+.question__mail, .question__phone {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 600;
+  font-size: 0.9rem;
+  font-family: "Open Sans", "offline_open_sans", "Roboto", sans-serif;
+  line-height: 22px;
+  color: #A5A5A5;
+  margin-bottom: 0.4rem;
+}
+.question__mail img, .question__phone img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.4rem;
+}
+.question__label {
+  display: block;
+  text-transform: uppercase;
+  font-family: "Open Sans", "offline_open_sans", "Roboto", sans-serif;
+  color: #08A6E4;
+  font-weight: 600;
+  font-size: 0.7rem;
+  line-height: 14px;
+  margin-top: 1.4rem;
+  letter-spacing: 3px;
+}
+.question__input {
+  display: block;
+  border: 0;
+  border-bottom: 1px solid #95989A;
+  width: 95%;
+  margin-bottom: 0.4rem;
+  padding: 0.4rem 0.2rem;
+  font-size: 1.1rem;
+}
+.question__input:focus {
+  border-color: #08A6E4;
+  outline: none;
+}
+.question__button {
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  color: white;
+  border: 0;
+  background-color: #08A6E4;
+  box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+  padding: 1rem 4.5rem;
+  border-radius: 35px;
+  font-family: "Open Sans", "offline_open_sans", "Roboto", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 17px;
+  margin-top: 1.6rem;
+}
+.question__checkbox {
+  margin-top: 0.4rem;
+}
+.question__checkbox__label {
+  display: inline-block;
+  width: 80%;
+  vertical-align: top;
+  font-family: "Open Sans", "offline_open_sans", "Roboto", sans-serif;
+  font-size: 0.7rem;
+  line-height: 16px;
+  font-weight: 400;
+  color: #707070;
+  padding-left: 0.4rem;
+}
+.question__checkbox__input {
+  display: inline-block;
+  width: 20%;
+  vertical-align: top;
+}
+
+.footer {
+  background-color: #F7F7F7;
+  box-shadow: 0 -5px 40px rgba(0, 0, 0, 0.2);
+  padding: 1.15rem 1.95rem;
+  margin-top: 1.4rem;
+  width: 100%;
+}
+.footer__desc {
+  display: inline-block;
+  vertical-align: middle;
+  width: 65%;
+}
+.footer__desc__title {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 30px;
+  color: #08A6E4;
+}
+.footer__desc__caption {
+  font-family: "Open Sans", "offline_open_sans", "Roboto", sans-serif;
+  font-size: 0.7rem;
+  line-height: 14px;
+  font-weight: 400;
+  color: #a5a5a5;
+  margin-top: 0.2rem;
+}
+.footer__images {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  width: 30%;
+}
+.footer__images img {
+  margin: 0 0.2rem;
+}
+
 /*# sourceMappingURL=style.css.map */
