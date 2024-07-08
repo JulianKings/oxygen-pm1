@@ -1,0 +1,80 @@
+@use 'variables' as *;
+
+.cards {
+    background-color: #f7f7f7;
+    width: 100%;
+    padding: 1.15rem 1.95rem;
+
+    &__item {
+        border: 1px solid #e8e9ed;
+        background-color: white;
+        border-radius: 5px;
+        margin-bottom: 2.2rem;
+        padding: 0.45rem 1.7rem;
+        margin-top: 1.2rem;
+
+        &__image {
+            width: 100%;
+            text-align: center;
+        }
+
+        &__image--primary {
+            background: url('./assets/Ellipse_red-2.png') no-repeat;
+            background-position: right 11% bottom 75%;            
+            padding-top: 2.5rem;
+        }
+
+        &__image--secondary {            
+            background: url('./assets/Ellipse_blue-2.png') no-repeat;
+            background-position: center;          
+            padding-top: 1.5rem;
+        }
+
+        &__title {
+            font-weight: 400;
+            font-size: 2rem;
+            line-height: 35px;
+            margin-top: 0.25rem;
+            padding-right: 1.8rem;
+        }
+
+        &__desc {
+            font-family: $open-sans;
+            font-weight: 400;
+            font-size: 0.9rem;
+            line-height: 19px;
+            margin-top: 0.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        &__special {
+            background-color: #55DFB4;
+            border: 1px solid #E8E9ED;
+            border-radius: 5px;
+        }
+    }
+
+    &__item-special
+    {
+        padding: 0 0;
+
+        &__title, &__desc {
+            padding: 1.15rem 1.7rem;
+        }
+
+        &__desc {
+            font-size: 1.1rem;
+            margin-top: 0;
+
+        }
+
+    }
+
+}
+
+.trumpet-fit {
+    object-fit: none;
+    height: 140px;
+    width: 90%;
+    object-position: -10px 10px;
+}

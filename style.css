@@ -146,4 +146,69 @@ body {
   top: 0.8rem;
 }
 
+.cards {
+  background-color: #f7f7f7;
+  width: 100%;
+  padding: 1.15rem 1.95rem;
+}
+.cards__item {
+  border: 1px solid #e8e9ed;
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 2.2rem;
+  padding: 0.45rem 1.7rem;
+  margin-top: 1.2rem;
+}
+.cards__item__image {
+  width: 100%;
+  text-align: center;
+}
+.cards__item__image--primary {
+  background: url("./assets/Ellipse_red-2.png") no-repeat;
+  background-position: right 11% bottom 75%;
+  padding-top: 2.5rem;
+}
+.cards__item__image--secondary {
+  background: url("./assets/Ellipse_blue-2.png") no-repeat;
+  background-position: center;
+  padding-top: 1.5rem;
+}
+.cards__item__title {
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 35px;
+  margin-top: 0.25rem;
+  padding-right: 1.8rem;
+}
+.cards__item__desc {
+  font-family: "Open Sans", "offline_open_sans", "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 19px;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+}
+.cards__item__special {
+  background-color: #55DFB4;
+  border: 1px solid #E8E9ED;
+  border-radius: 5px;
+}
+.cards__item-special {
+  padding: 0 0;
+}
+.cards__item-special__title, .cards__item-special__desc {
+  padding: 1.15rem 1.7rem;
+}
+.cards__item-special__desc {
+  font-size: 1.1rem;
+  margin-top: 0;
+}
+
+.trumpet-fit {
+  object-fit: none;
+  height: 140px;
+  width: 90%;
+  object-position: -10px 10px;
+}
+
 /*# sourceMappingURL=style.css.map */
