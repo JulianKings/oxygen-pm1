@@ -1,0 +1,31 @@
+.header {
+    box-shadow: 0 3px 6px rgb(00, 00, 00, 0.29);
+    width: 100%;
+    padding: 1.15rem 1.95rem;
+    height: fit-content;
+
+    &__title {
+        display: inline-block;
+        width: 80%;
+        text-align: left;
+        font-weight: 300;
+        font-size: 2rem;
+        line-height: 37px;
+        color: #08A6E4;
+    }
+
+    &__nav {
+        display: inline-block;
+        text-align: right;
+        width: 18%;
+        height: 100%;
+
+        &__list {
+            display: none;
+        }
+
+        &__img {
+            margin-bottom: 0.25rem;
+        }
+    }
+}

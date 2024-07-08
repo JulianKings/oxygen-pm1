@@ -1,0 +1,49 @@
+.stats {
+    padding: 1.15rem 1.95rem;
+
+    &__title {
+        font-size: 1.9rem;
+        font-weight: 300;
+        line-height: 35px;
+        text-align: center;
+    }
+
+    &__card {
+        width: 100%;
+        padding: 0.4rem 0;
+        text-align: center;
+        margin-top: 1.8rem;
+
+        &__image {
+            position: relative;
+        }
+
+        &__amount {
+            font-size: 1.35rem;
+            line-height: 24px;
+            font-weight: 800;
+            padding-top: 0.65rem;
+        }
+
+        &__desc {
+            color: #A5A5A5;
+            font-size: 1.05rem;
+            font-weight: 400;
+            line-height: 20px;
+            padding-top: 0.8rem;
+            padding-left: 4.2rem;
+            padding-right: 4.2rem;
+        }
+    }
+}
+
+.floating-image {
+    position: absolute;
+    left: calc(45% + 1.1rem);
+    top: 0.4rem;
+}
+
+.floating-image-eye {
+    left: calc(45% + 0.6rem);
+    top: 0.8rem;
+}

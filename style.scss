@@ -1,8 +1,7 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-body {
-    min-width: 320px;
-}
+// Variables
+$open-sans: 'Open Sans', 'offline_open_sans', 'Roboto', sans-serif;
+
+// Imports
+@use 'main';
+@use 'header';
+@use 'content';

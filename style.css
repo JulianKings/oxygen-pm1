@@ -1,3 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@font-face {
+  font-family: "offline_raleway_italic";
+  src: url("./assets/fonts/raleway-italic-variablefont_wght-webfont.woff2") format("woff2"), url("./assets/fonts/raleway-italic-variablefont_wght-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "offline_raleway";
+  src: url("./assets/fonts/raleway-variablefont_wght-webfont.woff2") format("woff2"), url("./assets/fonts/raleway-variablefont_wght-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "offline_open_sans_italic";
+  src: url("./assets/fonts/opensans-italic-variablefont_wdthwght-webfont.woff2") format("woff2"), url("./assets/fonts/opensans-italic-variablefont_wdthwght-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "offline_open_sans";
+  src: url("./assets/fonts/opensans-variablefont_wdthwght-webfont.woff2") format("woff2"), url("./assets/fonts/opensans-variablefont_wdthwght-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,6 +32,118 @@
 
 body {
   min-width: 320px;
+  font-family: "Raleway", "offline_raleway", "Roboto", sans-serif;
+}
+
+.header {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.29);
+  width: 100%;
+  padding: 1.15rem 1.95rem;
+  height: fit-content;
+}
+.header__title {
+  display: inline-block;
+  width: 80%;
+  text-align: left;
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 37px;
+  color: #08A6E4;
+}
+.header__nav {
+  display: inline-block;
+  text-align: right;
+  width: 18%;
+  height: 100%;
+}
+.header__nav__list {
+  display: none;
+}
+.header__nav__img {
+  margin-bottom: 0.25rem;
+}
+
+.sell-more {
+  margin-top: 2.45rem;
+  width: 100%;
+  padding: 1.15rem 1.95rem;
+  background: url("./assets/background.png") no-repeat;
+  background-position: center top 13.5rem;
+  padding-bottom: 13.5rem;
+}
+.sell-more__title {
+  font-size: 2.45rem;
+  font-weight: 400;
+  line-height: 41px;
+  text-align: center;
+}
+.sell-more__desc {
+  font-size: 1rem;
+  font-family: "Open Sans", "offline_open_sans", "Roboto", sans-serif;
+  line-height: 23px;
+  text-align: center;
+  font-weight: 400;
+  padding: 1.15rem 1.5rem;
+  margin-bottom: 0.8rem;
+}
+.sell-more__button {
+  width: 100%;
+  background-color: #08A6E4;
+  color: white;
+  font-family: "Open Sans", "offline_open_sans", "Roboto", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  font-weight: 700;
+  line-height: 22px;
+  border: 0;
+  border-radius: 1.8rem;
+  padding: 1.1rem 1.1rem;
+  box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+}
+
+.stats {
+  padding: 1.15rem 1.95rem;
+}
+.stats__title {
+  font-size: 1.9rem;
+  font-weight: 300;
+  line-height: 35px;
+  text-align: center;
+}
+.stats__card {
+  width: 100%;
+  padding: 0.4rem 0;
+  text-align: center;
+  margin-top: 1.8rem;
+}
+.stats__card__image {
+  position: relative;
+}
+.stats__card__amount {
+  font-size: 1.35rem;
+  line-height: 24px;
+  font-weight: 800;
+  padding-top: 0.65rem;
+}
+.stats__card__desc {
+  color: #A5A5A5;
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 20px;
+  padding-top: 0.8rem;
+  padding-left: 4.2rem;
+  padding-right: 4.2rem;
+}
+
+.floating-image {
+  position: absolute;
+  left: calc(45% + 1.1rem);
+  top: 0.4rem;
+}
+
+.floating-image-eye {
+  left: calc(45% + 0.6rem);
+  top: 0.8rem;
 }
 
 /*# sourceMappingURL=style.css.map */
