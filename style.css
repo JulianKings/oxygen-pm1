@@ -211,4 +211,127 @@ body {
   object-position: -10px 10px;
 }
 
+.pricing {
+  width: 100%;
+  padding: 1.15rem 2.95rem;
+}
+.pricing__title {
+  font-size: 2.45rem;
+  font-weight: 400;
+  line-height: 41px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.pricing__card {
+  font-family: "Open Sans", "offline_open_sans", "Roboto", sans-serif;
+  padding: 1.15rem 0.35rem;
+  margin-bottom: 4rem;
+  padding-bottom: 2.2rem;
+  border: 1px solid #000;
+  border-radius: 18px;
+  position: relative;
+  transition: transform 0.6s ease-in-out;
+}
+.pricing__card__price {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  width: 55%;
+}
+.pricing__card__perks {
+  display: inline-block;
+  width: 40%;
+  vertical-align: middle;
+  font-size: 0.7rem;
+  line-height: 19px;
+  padding-left: 1.15rem;
+}
+.pricing__card__button {
+  position: absolute;
+  left: 32%;
+  bottom: -1.4rem;
+  background-color: #000;
+  color: white;
+  font-size: 0.65rem;
+  line-height: 17px;
+  font-weight: 700;
+  border: 0;
+  padding: 0.8rem 3rem;
+  border-radius: 23px;
+}
+.pricing__card__button--primary {
+  background-color: #FB3B64;
+}
+.pricing__card__button--secondary {
+  background-color: #07ACE6;
+}
+.pricing__card__button--tertiary {
+  background-color: #55DFB4;
+}
+.pricing__card:hover, .pricing__card:active {
+  transform: scale(1.1);
+}
+.pricing__card:hover .pricing__card__button--primary, .pricing__card:active .pricing__card__button--primary {
+  box-shadow: 5px 10px 14px rgba(251, 59, 100, 0.29);
+}
+.pricing__card:hover .pricing__card__button--secondary, .pricing__card:active .pricing__card__button--secondary {
+  box-shadow: 5px 10px 14px rgba(7, 172, 230, 0.29);
+}
+.pricing__card:hover .pricing__card__button--tertiary, .pricing__card:active .pricing__card__button--tertiary {
+  box-shadow: 5px 10px 14px rgba(85, 223, 180, 0.29);
+}
+.pricing__card--primary {
+  border-color: #FB3B64;
+}
+.pricing__card--secondary {
+  border-color: #07ACE6;
+}
+.pricing__card--tertiary {
+  border-color: #55DFB4;
+}
+.pricing__card--primary:hover, .pricing__card--primary:active {
+  box-shadow: 5px 10px 27px rgba(251, 59, 100, 0.29);
+}
+.pricing__card--secondary:hover, .pricing__card--secondary:active {
+  box-shadow: 5px 10px 27px rgba(7, 172, 230, 0.29);
+}
+.pricing__card--tertiary:hover, .pricing__card--tertiary:active {
+  box-shadow: 5px 10px 27px rgba(85, 223, 180, 0.29);
+}
+
+.price__caption {
+  font-family: "Raleway", "offline_raleway", "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 24px;
+}
+.price__value {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 64px;
+}
+.price__value--primary {
+  color: #FB3B64;
+}
+.price__value--secondary {
+  color: #07ACE6;
+}
+.price__value--tertiary {
+  color: #55DFB4;
+}
+.price__offer {
+  font-family: "Raleway", "offline_raleway", "Roboto", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 14px;
+}
+
+.perks__list--positive {
+  list-style: url("./assets/Checkbox.png");
+}
+
+.perks__list--negative {
+  list-style: url("./assets/Cross.png");
+}
+
 /*# sourceMappingURL=style.css.map */
