@@ -66,46 +66,46 @@
         &__button--tertiary {
             background-color: #55DFB4;
         }
-    }
 
-    &__card:hover, &__card:active {
-        transform: scale(1.1);
-
-        .pricing__card__button--primary {
-            box-shadow: 5px 10px 14px rgb(251, 59, 100, 0.29);        
-        }
+        &:hover, &:active {
+            transform: scale(1.1);
     
-        .pricing__card__button--secondary {
-            box-shadow: 5px 10px 14px rgb(7, 172, 230, 0.29);
+            .pricing__card__button--primary {
+                box-shadow: 5px 10px 14px rgb(251, 59, 100, 0.29);        
+            }
+        
+            .pricing__card__button--secondary {
+                box-shadow: 5px 10px 14px rgb(7, 172, 230, 0.29);
+            }
+        
+            .pricing__card__button--tertiary {
+                box-shadow: 5px 10px 14px rgb(85, 223, 180, 0.29);
+            }
         }
-    
-        .pricing__card__button--tertiary {
-            box-shadow: 5px 10px 14px rgb(85, 223, 180, 0.29);
+
+        &--primary {
+            border-color: #FB3B64;
+
+            &:hover, &:active {
+                box-shadow: 5px 10px 27px rgb(251, 59, 100, 0.29); 
+            }
         }
-    }
 
-    &__card--primary {
-        border-color: #FB3B64;
-    }
+        &--secondary {
+            border-color: #07ACE6;
 
-    &__card--secondary {
-        border-color: #07ACE6;
-    }
+            &:hover, &:active {
+                box-shadow: 5px 10px 27px rgb(7, 172, 230, 0.29);
+            }
+        }
 
-    &__card--tertiary {
-        border-color: #55DFB4;
-    }
+        &--tertiary {
+            border-color: #55DFB4;
 
-    &__card--primary:hover, &__card--primary:active {
-        box-shadow: 5px 10px 27px rgb(251, 59, 100, 0.29);        
-    }
-
-    &__card--secondary:hover, &__card--secondary:active {
-        box-shadow: 5px 10px 27px rgb(7, 172, 230, 0.29);
-    }
-
-    &__card--tertiary:hover, &__card--tertiary:active {
-        box-shadow: 5px 10px 27px rgb(85, 223, 180, 0.29);
+            &:hover, &:active {
+                box-shadow: 5px 10px 27px rgb(85, 223, 180, 0.29);
+            }
+        }
     }
 }
 

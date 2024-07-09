@@ -56,11 +56,11 @@
         margin-bottom: 0.4rem;
         padding: 0.4rem 0.2rem;
         font-size: 1.1rem;
-    }
 
-    &__input:focus {
-        border-color: #08A6E4;
-        outline: none;
+        &:focus {
+            border-color: #08A6E4;
+            outline: none;
+        }
     }
 
     &__button {
@@ -80,13 +80,19 @@
         line-height: 17px;
 
         margin-top: 1.6rem;
+
+        transition: transform 0.6s ease-in;
+
+        &:hover, &:active {
+            transform: scale(1.1);
+        }
     }
 
     &__checkbox {
         
-        margin-top: 0.4rem;
+        margin-top: 0.8rem;
 
-        &__label {
+        &__label-text {
             display: inline-block;
             width: 80%;
             vertical-align: top;
@@ -99,9 +105,33 @@
         }
 
         &__input {
+            display: none;
+        }
+
+        &__input + label {
             display: inline-block;
-            width: 20%;
+            width: 3.5%;
             vertical-align: top;
+            background-color: white;
+            border: 1px solid #cacece;
+            padding: 9px;
+            border-radius: 3px;
+            margin-top: 0.1rem;
+            position: relative;
+        }
+
+        &__input:checked + label {
+	        border: 1px solid #adb8c0;
+
+            &:after {
+                content: '';
+                background: url('./assets/Checkmark.png') no-repeat;
+                width: 11px;
+                height: 12px;
+                position: absolute;
+                top: 3px;
+                left: 4px;
+            }
         }
     }
 }

@@ -37,5 +37,11 @@
         border: 0; border-radius: 1.8rem;
         padding: 1.1rem 1.1rem;
         box-shadow: 5px 10px 14px rgb(7, 172, 230, 0.29);
+
+        transition: transform 0.6s ease-in;
+
+        &:hover, &:active {
+            transform: scale(1.1);
+        }
     }
 }
