@@ -47,3 +47,16 @@
     left: calc(45% + 0.6rem);
     top: 0.8rem;
 }
+
+@media only screen and (min-width: 1000px) {
+    .stats {
+        margin-top: 4rem;
+
+        &__container {
+            display: flex;
+            justify-content: space-around;
+            padding: 0 10%;
+            padding-bottom: 6rem;
+        }
+    }
+}

@@ -78,3 +78,13 @@
     width: 90%;
     object-position: -10px 10px;
 }
+
+@media only screen and (min-width: 1000px) {
+    .cards {
+        margin-top: 4rem;
+
+        &__item {
+            display: flex;
+        }
+    }
+}

@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 .header {
     box-shadow: 0 3px 6px rgb(00, 00, 00, 0.29);
     width: 100%;
@@ -26,6 +28,81 @@
 
         &__img {
             margin-bottom: 0.25rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .header {
+        display: flex;
+        align-items: stretch;
+        justify-content: baseline;
+        padding: 0 0;
+
+        &__title {
+            width: auto;
+            padding: 1.15rem 1.95rem;
+
+            span {
+                display: none;
+            }
+
+            &:after {
+                width: 100%;
+                content: 'OXYGEN Shop';
+                display: inline-block;
+                text-align: left;
+                font-weight: 300;
+                font-size: 2rem;
+                line-height: 37px;
+                color: #08A6E4;
+                padding-left: 15%;
+            }
+
+        }
+
+        &__nav {
+            flex: 1 0 auto;
+            padding: 0;
+            height: auto;
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+
+            img {
+                display: none;
+            }
+
+            &__list {
+                width: 100%;                
+                padding-left: 30%;
+                padding-right: 8%;
+                height: auto;
+                display: flex;
+                list-style-type: none;
+                justify-content: space-between;
+                align-items: stretch;
+
+                
+            }
+        }
+    }
+
+    .nav__list__item {
+        display: flex;
+        align-items: center;
+        font-family: $open-sans;
+        font-weight: 700;
+        font-size: 0.8rem;
+        letter-spacing: 3px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: #A5A5A5;
+
+        &:hover, &:active {
+            color: black;
+            padding-top: 0.15rem;
+            border-bottom: 0.35rem solid #08A6E4;
         }
     }
 }
