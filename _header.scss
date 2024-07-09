@@ -23,12 +23,38 @@
         height: 100%;
 
         &__list {
-            display: none;
+            display: block;
+            max-height: 0;
+            overflow: hidden;
+
+            transition: max-height 0.8s ease-in-out;
         }
 
         &__img {
             margin-bottom: 0.25rem;
         }
+
+        &--open {
+            margin-top: 0.5rem;
+            padding-top: 0.5rem;
+        }
+    }
+}
+
+.nav__list__item {
+    display: flex;
+    align-items: center;
+    font-family: $open-sans;
+    font-weight: 700;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #A5A5A5;
+    margin-bottom: 0.8rem;
+
+    &:hover, &:active {
+        color: black;
     }
 }
 
@@ -62,16 +88,7 @@
         }
 
         &__nav {
-            flex: 1 0 auto;
-            padding: 0;
-            height: auto;
-            display: flex;
-            align-items: stretch;
-            justify-content: center;
-
-            img {
-                display: none;
-            }
+            display: none;
 
             &__list {
                 width: 100%;                
@@ -81,28 +98,27 @@
                 display: flex;
                 list-style-type: none;
                 justify-content: space-between;
-                align-items: stretch;
+                align-items: stretch;                
+            }
 
-                
+            &--open {
+                flex: 1 0 auto;
+                padding: 0;
+                height: auto;
+                display: flex;
+                align-items: stretch;
+                justify-content: center;
             }
         }
     }
 
     .nav__list__item {
-        display: flex;
-        align-items: center;
-        font-family: $open-sans;
-        font-weight: 700;
-        font-size: 0.8rem;
-        letter-spacing: 3px;
-        line-height: 15px;
-        text-transform: uppercase;
-        color: #A5A5A5;
+
+        margin-bottom: 0;
 
         &:hover, &:active {
-            color: black;
-            padding-top: 0.15rem;
             border-bottom: 0.35rem solid #08A6E4;
+            padding-top: 0.15rem;
         }
     }
 }
