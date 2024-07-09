@@ -113,9 +113,9 @@
             width: 3.5%;
             vertical-align: top;
             background-color: white;
-            border: 1px solid #cacece;
+            border: 1.5px solid #95989A;
             padding: 9px;
-            border-radius: 3px;
+            border-radius: 5px;
             margin-top: 0.1rem;
             position: relative;
         }
@@ -132,6 +132,32 @@
                 top: 3px;
                 left: 4px;
             }
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .question {
+        max-width: 85ch;
+        display: flex;
+
+        &__checkbox {
+            &__label-text {
+                padding-right: 0;
+            }
+        }
+
+        &__information {
+            padding-top: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        }
+
+        &__form {
+            width: 46%;
+            display: flex;
+            flex-direction: column;
         }
     }
 }

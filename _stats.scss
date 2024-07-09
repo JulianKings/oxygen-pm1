@@ -55,8 +55,19 @@
         &__container {
             display: flex;
             justify-content: space-around;
-            padding: 0 10%;
+            padding: 0 8%;
             padding-bottom: 6rem;
         }
+    }
+
+    .floating-image {
+        position: absolute;
+        left: calc(48% + 1.1rem);
+        top: 0.4rem;
+    }
+    
+    .floating-image-eye {
+        left: calc(48% + 0.6rem);
+        top: 0.8rem;
     }
 }

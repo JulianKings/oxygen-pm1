@@ -3,3 +3,12 @@
 @use 'cards';
 @use 'pricing';
 @use 'question';
+
+@media only screen and (min-width: 1000px) {
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

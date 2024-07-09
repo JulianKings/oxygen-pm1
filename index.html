@@ -61,105 +61,122 @@
         <section class="cards">
             <div class="cards__item">
                 <div class="cards__item__image cards__item__image--primary">
-                    <img src="./assets/macbook.png" alt="macbook" />
+                    <img src="./assets/macbook.png" class="image-small" alt="macbook" />
+                    <img src="./assets/macbook-big.png" class="image-big" alt="macbook" />
                 </div>
-                <p class="cards__item__title">Be always first</p>
-                <p class="cards__item__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime accusantium itaque, harum eius ipsum dolorum minima amet.</p>
+                <div class="cards__item__text">
+                    <p class="cards__item__title">Be always first</p>
+                    <p class="cards__item__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <div class="cards__item__line cards__item__line--red"></div>
+                </div>
             </div>
-            <div class="cards__item">
+            <div class="cards__item cards__item--reverse">
                 <div class="cards__item__image cards__item__image--secondary">
-                    <img src="./assets/iphone.png" alt="iphone" />
+                    <img src="./assets/iphone.png" class="image-small" alt="iphone" />
+                    <img src="./assets/iphone-big.png" class="image-big" alt="iphone" />
                 </div>
-                <p class="cards__item__title">Your shop is where you are!</p>
-                <p class="cards__item__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime accusantium itaque, harum eius ipsum dolorum minima amet.</p>
+                <div class="cards__item__text">
+                    <p class="cards__item__title">Your shop is where you are!</p>
+                    <p class="cards__item__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <div class="cards__item__line cards__item__line--blue"></div>
+                </div>
             </div>
-            <div class="cards__item cards__item-special">
-                <p class="cards__item__title cards__item-special__title">Increase recognition in your brand!</p>
-                <p class="cards__item__desc cards__item-special__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime accusantium itaque, harum eius ipsum dolorum minima amet.</p>
+            <div class="cards__item cards__item--special">
+                <div class="cards__item__text cards__item--special__text">
+                    <p class="cards__item__title cards__item--special__title">Increase recognition in your brand!</p>
+                    <p class="cards__item__desc cards__item--special__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <div class="cards__item__line cards__item--special__line cards__item__line--green"></div>
+                </div>
                 <div class="cards__item__special">
-                    <img src="./assets/trumpet.png" class="trumpet-fit" alt="trumpet" />
+                    <img src="./assets/trumpet.png" class="trumpet-fit image-small" alt="trumpet" />
+                    <img src="./assets/trumpet-big.png" class="trumpet-fit image-big" alt="trumpet" />
                 </div>
             </div>
         </section>
         <section class="pricing">
             <p class="pricing__title">Pricing</p>
-            <div class="pricing__card pricing__card--primary">
-                <div class="pricing__card__price">
-                    <div class="price">
-                            <p class="price__caption">Basic</p>
-                            <p class="price__value price__value--primary">$0</p>
+            <div class="pricing__container">
+                <div class="pricing__card pricing__card--primary">
+                    <div class="pricing__card__price">
+                        <div class="price">
+                                <p class="price__caption">Basic</p>
+                                <p class="price__value price__value--primary">$0</p>
+                        </div>
                     </div>
-                </div>
-                <div class="pricing__card__perks">
-                    <ul class="perks__card__list">
-                        <li class="perks__list--positive">100 MB HDD</li>
-                        <li class="perks__list--positive">1 Subdomain</li>
-                        <li class="perks__list--positive">2 E-mails</li>
-                        <li class="perks__list--negative">Two years license</li>
-                        <li class="perks__list--negative">Full support</li>
-                    </ul>
-                </div>
-                <button type="button" class="pricing__card__button pricing__card__button--primary">Begin</button>
-            </div>
-            <div class="pricing__card pricing__card--secondary">
-                <div class="pricing__card__price">
-                    <div class="price">
-                        <p class="price__caption">Professional</p>
-                        <p class="price__value price__value--secondary">$25</p>
-                        <p class="price__offer">Limited offer</p>
+                    <div class="pricing__card__perks">
+                        <ul class="perks__card__list">
+                            <li class="perks__list--positive">100 MB HDD</li>
+                            <li class="perks__list--positive">1 Subdomain</li>
+                            <li class="perks__list--positive">2 E-mails</li>
+                            <li class="perks__list--negative">Two years license</li>
+                            <li class="perks__list--negative">Full support</li>
+                        </ul>
                     </div>
+                    <button type="button" class="pricing__card__button pricing__card__button--primary">Begin</button>
                 </div>
-                <div class="pricing__card__perks">                    
-                    <ul class="perks__card__list">
-                        <li class="perks__list--positive">500 MB HDD</li>
-                        <li class="perks__list--positive">2 Subdomains</li>
-                        <li class="perks__list--positive">5 E-mails</li>
-                        <li class="perks__list--positive">One year license</li>
-                        <li class="perks__list--negative">Full support</li>
-                    </ul>
-                </div>
-                <button type="button" class="pricing__card__button pricing__card__button--secondary">Begin</button>
-            </div>
-            <div class="pricing__card pricing__card--tertiary">
-                <div class="pricing__card__price">
-                    <div class="price">
-                        <p class="price__caption">Premium</p>
-                        <p class="price__value price__value--tertiary">$60</p>
-                        <p class="price__offer">Limited offer</p>
+                <div class="pricing__card pricing__card--secondary">
+                    <div class="pricing__card__price pricing__card__price--offer">
+                        <div class="price">
+                            <p class="price__caption">Professional</p>
+                            <p class="price__value price__value--secondary">$25</p>
+                            <p class="price__offer">Limited offer</p>
+                        </div>
                     </div>
+                    <div class="pricing__card__perks">                    
+                        <ul class="perks__card__list">
+                            <li class="perks__list--positive">500 MB HDD</li>
+                            <li class="perks__list--positive">2 Subdomains</li>
+                            <li class="perks__list--positive">5 E-mails</li>
+                            <li class="perks__list--positive">One year license</li>
+                            <li class="perks__list--negative">Full support</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="pricing__card__button pricing__card__button--secondary">Begin</button>
                 </div>
-                <div class="pricing__card__perks">
-                    <ul class="perks__card__list">
-                        <li class="perks__list--positive">2 GB HDD</li>
-                        <li class="perks__list--positive">5 Subdomains</li>
-                        <li class="perks__list--positive">20 E-mails</li>
-                        <li class="perks__list--positive">Two years license</li>
-                        <li class="perks__list--positive">Full support</li>
-                    </ul>
+                <div class="pricing__card pricing__card--tertiary">
+                    <div class="pricing__card__price pricing__card__price--offer">
+                        <div class="price">
+                            <p class="price__caption">Premium</p>
+                            <p class="price__value price__value--tertiary">$60</p>
+                            <p class="price__offer">Limited offer</p>
+                        </div>
+                    </div>
+                    <div class="pricing__card__perks">
+                        <ul class="perks__card__list">
+                            <li class="perks__list--positive">2 GB HDD</li>
+                            <li class="perks__list--positive">5 Subdomains</li>
+                            <li class="perks__list--positive">20 E-mails</li>
+                            <li class="perks__list--positive">Two years license</li>
+                            <li class="perks__list--positive">Full support</li>
+                        </ul>
+                    </div>
+                    <button type="button" class="pricing__card__button pricing__card__button--tertiary">Begin</button>
                 </div>
-                <button type="button" class="pricing__card__button pricing__card__button--tertiary">Begin</button>
             </div>
         </section>
         <section class="question">
-            <p class="question__title">Any questions?</p>
-            <p class="question__desc">Leave your email address or call us!</p>
+            <div class="question__information">
+                <p class="question__title">Any questions?</p>
+                <p class="question__desc">Leave your email address or call us!</p>
 
-            <div class="question__mail"><img src="./assets/mail.png" alt="mail" /> <span>julianreyeslahoz@gmail.com</span></div>
-            <div class="question__phone"><img src="./assets/phone.png" alt="phone" /> <span>(+12) 123 456 789</span></div>
-            <br />
-
-            <label for="contact-name" class="question__label">Name</label>
-            <input id="contact-name" type="text" class="question__input" />
-
-            <label for="contact-mail" class="question__label">Email</label>
-            <input id="contact-mail" type="text" class="question__input" />
-
-            <div class="question__checkbox">
-                <input type="checkbox" class="question__checkbox__input" id="contact-consent" /><label for="contact-consent" class="question__checkbox__label"></label>
-                <label for="contact-consent" class="question__checkbox__label-text">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</label>
+                <div class="question__mail"><img src="./assets/mail.png" alt="mail" /> <span>julianreyeslahoz@gmail.com</span></div>
+                <div class="question__phone"><img src="./assets/phone.png" alt="phone" /> <span>(+12) 123 456 789</span></div>
             </div>
 
-            <button type="button" class="question__button">Send</button>
+            <div class="question__form">
+                <label for="contact-name" class="question__label">Name</label>
+                <input id="contact-name" type="text" class="question__input" />
+
+                <label for="contact-mail" class="question__label">Email</label>
+                <input id="contact-mail" type="text" class="question__input" />
+
+                <div class="question__checkbox">
+                    <input type="checkbox" class="question__checkbox__input" id="contact-consent" /><label for="contact-consent" class="question__checkbox__label"></label>
+                    <label for="contact-consent" class="question__checkbox__label-text">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</label>
+                </div>
+
+                <button type="button" class="question__button">Send</button>
+            </div>
         </section>
     </main>
     <footer class="footer">

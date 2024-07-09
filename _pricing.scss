@@ -14,9 +14,9 @@
 
     &__card {
         font-family: $open-sans;
-        padding: 1.15rem 0.35rem;
+        padding: 2.15rem 0.35rem;
         margin-bottom: 4rem;
-        padding-bottom: 2.2rem;
+        padding-bottom: 3.2rem;
 
         border: 1px solid #000;
         border-radius: 18px;
@@ -150,4 +150,43 @@
 
 .perks__list--negative {
     list-style: url('./assets/Cross.png');
+}
+
+@media only screen and (min-width: 1000px) {
+    .pricing {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__container {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            width: 100%;
+            flex: 1 0 auto;
+            max-width: 95ch;
+        }
+
+        &__card {
+            width: 30%;
+            flex: 1 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &__button {
+                left: 28%;
+            }
+
+            &__price {
+                margin-bottom: 3rem;
+
+                &--offer {
+                    margin-bottom: 2.5rem;
+                }
+            }
+        }
+    }
 }

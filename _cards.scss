@@ -16,18 +16,18 @@
         &__image {
             width: 100%;
             text-align: center;
-        }
 
-        &__image--primary {
-            background: url('./assets/Ellipse_red-2.png') no-repeat;
-            background-position: right 11% bottom 75%;            
-            padding-top: 2.5rem;
-        }
+            &--primary {
+                background: url('./assets/Ellipse_red-2.png') no-repeat;
+                background-position: right 11% bottom 75%;            
+                padding-top: 2.5rem;
+            }
 
-        &__image--secondary {            
-            background: url('./assets/Ellipse_blue-2.png') no-repeat;
-            background-position: center;          
-            padding-top: 1.5rem;
+            &--secondary {            
+                background: url('./assets/Ellipse_blue-2.png') no-repeat;
+                background-position: center;          
+                padding-top: 1.5rem;
+            }
         }
 
         &__title {
@@ -51,23 +51,28 @@
             background-color: #55DFB4;
             border: 1px solid #E8E9ED;
             border-radius: 5px;
-        }
-    }
-
-    &__item-special
-    {
-        padding: 0 0;
-
-        &__title, &__desc {
-            padding: 1.15rem 1.7rem;
+            padding-bottom: 1rem;
         }
 
-        &__desc {
-            font-size: 1.1rem;
-            margin-top: 0;
+        &--special {
+
+            padding: 0 0;
+
+            &__title, &__desc {
+                padding: 1.15rem 1.7rem;
+            }
+
+            &__desc {
+                font-size: 1.1rem;
+                margin-top: 0;
+
+            }
 
         }
 
+        &__line {
+            display: none;
+        }
     }
 
 }
@@ -79,12 +84,144 @@
     object-position: -10px 10px;
 }
 
+.image-big {
+    display: none;
+}
+
 @media only screen and (min-width: 1000px) {
     .cards {
         margin-top: 4rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         &__item {
+            width: 75%;
+            max-width: 85ch;
             display: flex;
+            flex-direction: row-reverse;
+
+            &__desc {
+                font-size: 1.1rem;
+            }
+
+            &__special {
+                margin: 0; padding: 0;
+                margin-left: 1rem;
+                flex: 1 0 auto;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                width: 35%;
+            }
+
+
+
+            &__line {
+                display: block;
+                width: 85%;
+                background-color: black;
+                height: 4px;
+                margin-top: 1.4rem;
+
+                &--red {
+                    background-color: #FB3B64;
+                }
+
+                &--blue {
+                    background-color: #08A6E4;
+                }
+
+                &--green {
+                    background-color: #55DFB4;
+                }
+            }
+
+            &--special {
+                background-color: #f7f7f7;
+                border: 0;
+                flex-direction: row;
+
+                &__title, &__desc {                    
+                    padding: 0.45rem 1.7rem;
+                }
+
+                &__line {
+                    margin: 0 1.7rem;
+                    width: 68%;
+                }
+
+                &__text {
+                    border: 1px solid #e8e9ed;
+                    background-color: white;
+                    border-radius: 5px;
+                    padding: 0.45rem 1.7rem;
+                    width: 60%;
+                    flex: 1 0 auto;
+                }
+            }
+
+            &__image {
+                width: 60%;
+                padding-bottom: 1rem;
+                display: flex;
+                justify-content: flex-end;
+
+                & img {
+                    max-width: 100%;
+                }
+
+                &--primary {            
+                    background: url('./assets/ellipse-red-big.png') no-repeat;
+                    background-position: center; 
+                    background-size: 70%;  
+                    background-position-x: 115%; 
+                    background-position-y: 5%;     
+                    padding-top: 12%;
+                    padding-right: 1rem;
+                }
+
+                &--secondary {            
+                    background: url('./assets/ellipse-blue-big.png') no-repeat;
+                    background-position: center; 
+                    background-size: 70%;  
+                    background-position-x: 1rem;      
+                    padding-top: 2.5rem;
+                    padding-left: 1rem;
+                }
+            }
+
+            &__text {
+                width: 50%;
+                padding: 2rem 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            &--reverse {
+                flex-direction: row;
+            }
         }
+    }
+
+    .image {
+        &-big {
+            display: block;
+        }
+
+        &-small {
+            display: none;
+        }
+    }
+
+    .trumpet-fit {
+        object-fit: cover;
+        height: auto;
+        max-height: 70%;
+        width: 95%;
     }
 }

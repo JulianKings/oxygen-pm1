@@ -86,7 +86,7 @@ body {
     font-size: 2rem;
     line-height: 37px;
     color: #08A6E4;
-    padding-left: 15%;
+    padding-left: 55%;
   }
   .header__nav {
     flex: 1 0 auto;
@@ -101,7 +101,7 @@ body {
   }
   .header__nav__list {
     width: 100%;
-    padding-left: 30%;
+    padding-left: 45%;
     padding-right: 8%;
     height: auto;
     display: flex;
@@ -127,7 +127,7 @@ body {
   }
 }
 .sell-more {
-  margin-top: 2.45rem;
+  margin-top: 4.45rem;
   width: 100%;
   padding: 1.15rem 1.95rem;
   background: url("./assets/background-s.png") no-repeat;
@@ -236,8 +236,17 @@ body {
   .stats__container {
     display: flex;
     justify-content: space-around;
-    padding: 0 10%;
+    padding: 0 8%;
     padding-bottom: 6rem;
+  }
+  .floating-image {
+    position: absolute;
+    left: calc(48% + 1.1rem);
+    top: 0.4rem;
+  }
+  .floating-image-eye {
+    left: calc(48% + 0.6rem);
+    top: 0.8rem;
   }
 }
 .cards {
@@ -286,16 +295,20 @@ body {
   background-color: #55DFB4;
   border: 1px solid #E8E9ED;
   border-radius: 5px;
+  padding-bottom: 1rem;
 }
-.cards__item-special {
+.cards__item--special {
   padding: 0 0;
 }
-.cards__item-special__title, .cards__item-special__desc {
+.cards__item--special__title, .cards__item--special__desc {
   padding: 1.15rem 1.7rem;
 }
-.cards__item-special__desc {
+.cards__item--special__desc {
   font-size: 1.1rem;
   margin-top: 0;
+}
+.cards__item__line {
+  display: none;
 }
 
 .trumpet-fit {
@@ -305,12 +318,120 @@ body {
   object-position: -10px 10px;
 }
 
+.image-big {
+  display: none;
+}
+
 @media only screen and (min-width: 1000px) {
   .cards {
     margin-top: 4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .cards__item {
+    width: 75%;
+    max-width: 85ch;
     display: flex;
+    flex-direction: row-reverse;
+  }
+  .cards__item__desc {
+    font-size: 1.1rem;
+  }
+  .cards__item__special {
+    margin: 0;
+    padding: 0;
+    margin-left: 1rem;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+  }
+  .cards__item__line {
+    display: block;
+    width: 85%;
+    background-color: black;
+    height: 4px;
+    margin-top: 1.4rem;
+  }
+  .cards__item__line--red {
+    background-color: #FB3B64;
+  }
+  .cards__item__line--blue {
+    background-color: #08A6E4;
+  }
+  .cards__item__line--green {
+    background-color: #55DFB4;
+  }
+  .cards__item--special {
+    background-color: #f7f7f7;
+    border: 0;
+    flex-direction: row;
+  }
+  .cards__item--special__title, .cards__item--special__desc {
+    padding: 0.45rem 1.7rem;
+  }
+  .cards__item--special__line {
+    margin: 0 1.7rem;
+    width: 68%;
+  }
+  .cards__item--special__text {
+    border: 1px solid #e8e9ed;
+    background-color: white;
+    border-radius: 5px;
+    padding: 0.45rem 1.7rem;
+    width: 60%;
+    flex: 1 0 auto;
+  }
+  .cards__item__image {
+    width: 60%;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .cards__item__image img {
+    max-width: 100%;
+  }
+  .cards__item__image--primary {
+    background: url("./assets/ellipse-red-big.png") no-repeat;
+    background-position: center;
+    background-size: 70%;
+    background-position-x: 115%;
+    background-position-y: 5%;
+    padding-top: 12%;
+    padding-right: 1rem;
+  }
+  .cards__item__image--secondary {
+    background: url("./assets/ellipse-blue-big.png") no-repeat;
+    background-position: center;
+    background-size: 70%;
+    background-position-x: 1rem;
+    padding-top: 2.5rem;
+    padding-left: 1rem;
+  }
+  .cards__item__text {
+    width: 50%;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .cards__item--reverse {
+    flex-direction: row;
+  }
+  .image-big {
+    display: block;
+  }
+  .image-small {
+    display: none;
+  }
+  .trumpet-fit {
+    object-fit: cover;
+    height: auto;
+    max-height: 70%;
+    width: 95%;
   }
 }
 .pricing {
@@ -326,9 +447,9 @@ body {
 }
 .pricing__card {
   font-family: "Open Sans", "offline_open_sans", "Roboto", sans-serif;
-  padding: 1.15rem 0.35rem;
+  padding: 2.15rem 0.35rem;
   margin-bottom: 4rem;
-  padding-bottom: 2.2rem;
+  padding-bottom: 3.2rem;
   border: 1px solid #000;
   border-radius: 18px;
   position: relative;
@@ -436,6 +557,39 @@ body {
   list-style: url("./assets/Cross.png");
 }
 
+@media only screen and (min-width: 1000px) {
+  .pricing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .pricing__container {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    width: 100%;
+    flex: 1 0 auto;
+    max-width: 95ch;
+  }
+  .pricing__card {
+    width: 30%;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .pricing__card__button {
+    left: 28%;
+  }
+  .pricing__card__price {
+    margin-bottom: 3rem;
+  }
+  .pricing__card__price--offer {
+    margin-bottom: 2.5rem;
+  }
+}
 .question {
   width: 100%;
   padding: 1.15rem 1.95rem;
@@ -534,9 +688,9 @@ body {
   width: 3.5%;
   vertical-align: top;
   background-color: white;
-  border: 1px solid #cacece;
+  border: 1.5px solid #95989A;
   padding: 9px;
-  border-radius: 3px;
+  border-radius: 5px;
   margin-top: 0.1rem;
   position: relative;
 }
@@ -553,6 +707,34 @@ body {
   left: 4px;
 }
 
+@media only screen and (min-width: 1000px) {
+  .question {
+    max-width: 85ch;
+    display: flex;
+  }
+  .question__checkbox__label-text {
+    padding-right: 0;
+  }
+  .question__information {
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+  .question__form {
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .footer {
   background-color: #F7F7F7;
   box-shadow: 0 -5px 40px rgba(0, 0, 0, 0.2);
@@ -587,6 +769,12 @@ body {
 }
 .footer__images img {
   margin: 0 0.2rem;
+}
+
+@media only screen and (min-width: 1000px) {
+  .footer__desc {
+    padding-left: 15%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
