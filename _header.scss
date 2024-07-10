@@ -9,7 +9,6 @@
     position: relative;
 
     &__scrollbar {
-        display: none;
         height: 0.19rem;
         width: 0%;
         background-color: #08A6E4;
@@ -39,7 +38,7 @@
             max-height: 0;
             overflow: hidden;
 
-            transition: max-height 0.8s ease-in-out;
+            transition: max-height 0.8s ease-in-out, padding-top 0.3s ease-in-out;
         }
 
         &__img {
@@ -58,7 +57,7 @@
     line-height: 0.94rem;
     text-transform: uppercase;
     color: #A5A5A5;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.88rem;
 
     &:hover, &:active {
         color: black;

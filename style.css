@@ -44,7 +44,6 @@ body {
   position: relative;
 }
 .header__scrollbar {
-  display: none;
   height: 0.19rem;
   width: 0%;
   background-color: #08A6E4;
@@ -71,7 +70,7 @@ body {
   display: block;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.8s ease-in-out;
+  transition: max-height 0.8s ease-in-out, padding-top 0.3s ease-in-out;
 }
 .header__nav__img {
   margin-bottom: 0.25rem;
@@ -87,7 +86,7 @@ body {
   line-height: 0.94rem;
   text-transform: uppercase;
   color: #A5A5A5;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.88rem;
 }
 .nav__list__item:hover, .nav__list__item:active {
   color: black;
