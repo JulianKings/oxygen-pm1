@@ -620,7 +620,7 @@ body {
   background-color: #55DFB4;
 }
 .pricing__card:hover, .pricing__card:active {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .pricing__card:hover .pricing__card__button--primary, .pricing__card:active .pricing__card__button--primary {
   box-shadow: 0.31rem 0.63rem 0.88rem rgba(251, 59, 100, 0.29);
@@ -697,7 +697,7 @@ body {
   .pricing__title {
     margin-top: 7.94rem;
     font-weight: 400;
-    line-height: 2.56rem;
+    line-height: 2.63rem;
     text-align: center;
     margin-bottom: 0;
   }
@@ -708,26 +708,27 @@ body {
     width: 100%;
     flex: 1 0 auto;
     max-width: 115ch;
+    margin-top: 4.44rem;
   }
   .pricing__card {
     width: 31%;
-    height: 30.31rem;
+    height: 29.31rem;
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
   }
   .pricing__card__button {
-    top: 28.735rem;
+    top: 27.735rem;
     left: 28%;
     height: 3.13rem;
   }
   .pricing__card__price {
-    margin-bottom: 3rem;
+    margin-bottom: 4.31rem;
+    margin-top: 2.13rem;
   }
   .pricing__card__price--offer {
-    margin-bottom: 2.5rem;
+    margin-bottom: 3.13rem;
   }
   .pricing__card__perks {
     width: 100%;
