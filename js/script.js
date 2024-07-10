@@ -1,7 +1,10 @@
+// vars
 const menuIcon = document.querySelector('.header__nav__img');
 const menuContainer = document.querySelector('.header__nav__list');
 const scrollStatusBar = document.querySelector('.header__scrollbar');
- 
+
+
+// events
 document.addEventListener('scroll', () => {
     const percentage = ((document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100);
     scrollStatusBar.style['width'] = Math.round(percentage) + '%';
@@ -21,6 +24,8 @@ menuIcon.addEventListener('blur', (event) => {
     }
 });
  
+// functions
+// hamburger menu functionality
 function alternateMenu(target)
 {
     if(target.getAttribute('data-open-menu') && target.getAttribute('data-open-menu') === 'open')
@@ -35,4 +40,13 @@ function alternateMenu(target)
         menuContainer.style['max-height'] = '40vh';
         menuContainer.style['padding-top'] = '2.5rem';
     }
+}
+
+// scroll top functionality
+function scrollToTop()
+{
+    setTimeout(() => {
+        window.scrollTo({top: 0, behavior: 'smooth'});        
+    }, 200);
+
 }
