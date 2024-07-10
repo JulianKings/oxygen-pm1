@@ -344,12 +344,12 @@ body {
 }
 .cards__item__image--primary {
   background: url("./assets/Ellipse_red-2.png") no-repeat;
-  background-position: right 11% bottom 75%;
+  background-position: calc(50% + 3.6rem) 25%;
   padding-top: 2.5rem;
 }
 .cards__item__image--secondary {
   background: url("./assets/Ellipse_blue-2.png") no-repeat;
-  background-position: center;
+  background-position: calc(50% - 1.2rem) 50%;
   padding-top: 1.5rem;
 }
 .cards__item__title {
@@ -871,6 +871,7 @@ body {
     display: flex;
     justify-content: center;
     padding-top: 0;
+    gap: 3.5rem;
     margin-top: 9.56rem;
   }
   .question__title {
@@ -956,6 +957,7 @@ body {
     height: 5.56rem;
     display: flex;
     justify-content: center;
+    margin-top: 3.69rem;
   }
   .footer__container {
     flex: 1 0 auto;
