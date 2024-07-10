@@ -1,10 +1,22 @@
 @use 'variables' as *;
 
 .header {
-    box-shadow: 0 3px 6px rgb(00, 00, 00, 0.29);
+    box-shadow: 0 0.19rem 0.38rem rgb(00, 00, 00, 0.29);
     width: 100%;
-    padding: 1.15rem 1.95rem;
+    height: 2.25rem;
+    padding: 1.06rem 1.56rem;
     height: fit-content;
+    position: relative;
+
+    &__scrollbar {
+        display: none;
+        height: 0.19rem;
+        width: 0%;
+        background-color: #08A6E4;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
 
     &__title {
         display: inline-block;
@@ -12,7 +24,7 @@
         text-align: left;
         font-weight: 300;
         font-size: 2rem;
-        line-height: 37px;
+        line-height: 2.31rem;
         color: #08A6E4;
     }
 
@@ -20,7 +32,7 @@
         display: inline-block;
         text-align: right;
         width: 18%;
-        height: 100%;
+        padding-right: 0.32rem;
 
         &__list {
             display: block;
@@ -33,11 +45,6 @@
         &__img {
             margin-bottom: 0.25rem;
         }
-
-        &--open {
-            margin-top: 0.5rem;
-            padding-top: 0.5rem;
-        }
     }
 }
 
@@ -46,9 +53,9 @@
     align-items: center;
     font-family: $open-sans;
     font-weight: 700;
-    font-size: 0.8rem;
-    letter-spacing: 3px;
-    line-height: 15px;
+    font-size: 0.69rem;
+    letter-spacing: 0.2rem;
+    line-height: 0.94rem;
     text-transform: uppercase;
     color: #A5A5A5;
     margin-bottom: 0.8rem;
@@ -64,6 +71,7 @@
         align-items: stretch;
         justify-content: baseline;
         padding: 0 0;
+        height: 4.38rem;
 
         &__title {
             width: auto;
@@ -80,7 +88,7 @@
                 text-align: left;
                 font-weight: 300;
                 font-size: 2rem;
-                line-height: 37px;
+                line-height: 2.31rem;
                 color: #08A6E4;
                 padding-left: 55%;
             }
@@ -91,6 +99,8 @@
             display: none;
 
             &__list {
+                max-height: 50vh;
+                transition: none;
                 width: 100%;                
                 padding-left: 45%;
                 padding-right: 8%;
@@ -117,8 +127,8 @@
         margin-bottom: 0;
 
         &:hover, &:active {
-            border-bottom: 0.35rem solid #08A6E4;
-            padding-top: 0.15rem;
+            border-bottom: 0.25rem solid #08A6E4;
+            padding-top: 0.25rem;
         }
     }
 }

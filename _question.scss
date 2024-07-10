@@ -2,38 +2,43 @@
 
 .question {
     width: 100%;
-    padding: 1.15rem 1.95rem;
+    padding: 0 1.95rem;
+    padding-top: 1.56rem;
 
     &__title {
-        font-size: 2.45rem;
+        font-size: 2.50rem;
         font-weight: 400;
-        line-height: 41px;
-        margin-bottom: 0.2rem;
+        line-height: 2.94rem;
+        margin-bottom: 0.19rem;
     }
 
     &__desc {
         font-size: 1rem;
         font-weight: 400;
         font-family: $open-sans;
-        line-height: 22px;
-        margin-bottom: 1.2rem;
+        line-height: 1.38rem;
+        margin-bottom: 2.38rem;
     }
 
     &__mail, &__phone {
         display: inline-block;
         vertical-align: middle;
         font-weight: 600;
-        font-size: 0.9rem;
+        font-size: 1rem;
         font-family: $open-sans;
-        line-height: 22px;
+        line-height: 1.38rem;
         color: #A5A5A5;
-        margin-bottom: 0.4rem;
+        margin-bottom: 0.63rem;
     }
 
     &__mail img, &__phone img {
         display: inline-block;
         vertical-align: middle;
-        margin-right: 0.4rem;
+        margin-right: 0.44rem;
+    }
+
+    &__form {
+        margin-top: 2.87rem;
     }
 
     &__label {
@@ -42,20 +47,24 @@
         font-family: $open-sans;
         color: #08A6E4;
         font-weight: 600;
-        font-size: 0.7rem;
-        line-height: 14px;
-        margin-top: 1.4rem;
-        letter-spacing: 3px;
+        font-size: 0.69rem;
+        line-height: 0.94rem;
+        letter-spacing: 0.2rem;
     }
 
     &__input {
         display: block;
         border: 0;
-        border-bottom: 1px solid #95989A;
+        border-bottom: 0.06rem solid #95989A;
         width: 95%;
-        margin-bottom: 0.4rem;
+        color: #95989A;
+        margin-bottom: 2.56rem;
         padding: 0.4rem 0.2rem;
-        font-size: 1.1rem;
+        font-size: 1rem;
+
+        &--last {
+            margin-bottom: 1.94rem;
+        }
 
         &:focus {
             border-color: #08A6E4;
@@ -65,21 +74,22 @@
 
     &__button {
         display: block;
+        height: 3.56rem;
         margin-left: auto; 
         margin-right: 0;
         color: white;
         border: 0;
         background-color: #08A6E4;
-        box-shadow: 5px 10px 14px rgb(7, 172, 230, 0.29);
-        padding: 1rem 4.5rem;
-        border-radius: 35px;
+        box-shadow: 0.31rem 0.63rem 0.88rem rgb(7, 172, 230, 0.29);
+        padding: 1rem 6.06rem;
+        border-radius: 2.19rem;
 
         font-family: $open-sans;
-        font-size: 0.9rem;
+        font-size: 0.81rem;
         font-weight: 700;
-        line-height: 17px;
+        line-height: 1.11rem;
 
-        margin-top: 1.6rem;
+        margin-top: 2.06rem;
 
         transition: transform 0.6s ease-in;
 
@@ -89,16 +99,13 @@
     }
 
     &__checkbox {
-        
-        margin-top: 0.8rem;
-
         &__label-text {
             display: inline-block;
-            width: 80%;
+            width: 90%;
             vertical-align: top;
             font-family: $open-sans;
-            font-size: 0.7rem;
-            line-height: 16px;
+            font-size: 0.75rem;
+            line-height: 1.02rem;
             font-weight: 400;
             color: #707070;
             padding-left: 0.4rem;
@@ -110,27 +117,27 @@
 
         &__input + label {
             display: inline-block;
-            width: 3.5%;
+            width: 1.5rem;
+            height: 1.5rem;
             vertical-align: top;
             background-color: white;
-            border: 1.5px solid #95989A;
-            padding: 9px;
-            border-radius: 5px;
-            margin-top: 0.1rem;
+            border: 0.06rem solid #95989A;
+            padding: 0.56rem;
+            border-radius: 0.25rem;
             position: relative;
         }
 
         &__input:checked + label {
-	        border: 1px solid #adb8c0;
+	        border: 0.06rem solid #adb8c0;
 
             &:after {
                 content: '';
                 background: url('./assets/Checkmark.png') no-repeat;
-                width: 11px;
-                height: 12px;
+                width: 0.75rem;
+                height: 0.69rem;
                 position: absolute;
-                top: 3px;
-                left: 4px;
+                top: 0.38rem;
+                left: 0.38rem;
             }
         }
     }

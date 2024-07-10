@@ -1,48 +1,59 @@
 @use 'variables' as *;
 
 .sell-more {
-    margin-top: 4.45rem;
+    margin-top: 6.25rem;
     width: 100%;
-    padding: 1.15rem 1.95rem;
-    background: url('./assets/background-s.png') no-repeat;
-    background-position: center top 13.5rem;
-    padding-bottom: 13.5rem;
     
     &__title {
-        font-size: 2.45rem;
+        padding: 0 2.06rem;
+        font-size: 2.19rem;
         font-weight: 400;
-        line-height: 41px;
+        line-height: 2.56rem;
         text-align: center;
     }
 
     &__desc {
+        padding: 0 2.06rem;
+        margin: 0 1rem;
+        margin-top: 1.25rem;
         font-size: 1rem;
         font-family: $open-sans;
-        line-height: 23px;
+        line-height: 1.44rem;
         text-align: center;
         font-weight: 400;
-        padding: 1.15rem 1.5rem;
-        margin-bottom: 0.8rem;
     }
 
     &__button {
-        width: 100%;
+        margin: 0 2.06rem;
+        margin-top: 1.75rem;
+        width: calc(100% - 2.06rem - 2.06rem);
+        height: 4.19rem;
+
         background-color: #08A6E4;
         color: white;
         font-family: $open-sans;
         font-size: 1rem;
         text-align: center;
         font-weight: 700;
-        line-height: 22px;
-        border: 0; border-radius: 1.8rem;
+        line-height: 1.38rem;
+
+        border: 0; border-radius: 2.5rem;
         padding: 1.1rem 1.1rem;
-        box-shadow: 5px 10px 14px rgb(7, 172, 230, 0.29);
+        box-shadow: 0.31rem 0.63rem 0.88rem rgb(7, 172, 230, 0.29);
 
         transition: transform 0.4s ease-in;
 
         &:hover, &:active {
             transform: scale(1.1);
         }
+    }
+
+    &__background {
+        margin-top: 3.19rem;
+        background: url('./assets/background-s.png') no-repeat;
+        height: 16.69rem;
+        background-position: center;
+        width: 100%;
     }
 }
 
@@ -51,17 +62,30 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 6rem;
+        margin-top: 8.13rem;
 
+        &__title {
+            font-size: 3.06rem;
+            line-height: 3.56rem;
+        }
 
-        background: url('./assets/Background.png') no-repeat;
-        background-position: center top 10.5rem;
-        background-size: contain;
-        padding-bottom: 30%;
+        &__desc {
+            margin-top: 1.56rem;
+            line-height: 1.38rem;
+        }
 
         &__button {
-            max-width: 40ch;
+            margin-top: 2.38rem;
+            height: 4.19rem;
+            max-width: 45ch;
             margin-bottom: 3.5rem;
+        }
+
+        &__background {
+            margin-top: -0.5rem;
+            background: url('./assets/background.png') no-repeat;
+            height: 37.13rem;
+            background-position: center;
         }
     }
 }

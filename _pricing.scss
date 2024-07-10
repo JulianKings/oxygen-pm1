@@ -2,24 +2,24 @@
 
 .pricing {
     width: 100%;
-    padding: 1.15rem 2.95rem;
+    padding: 0 2.45rem;
 
     &__title {
-        font-size: 2.45rem;
+        font-size: 2.25rem;
         font-weight: 400;
-        line-height: 41px;
+        line-height: 2.56rem;
         text-align: center;
-        margin-bottom: 2rem;
+        margin-bottom: 0.88rem;
+        margin-top: 3.38rem;
     }
 
     &__card {
         font-family: $open-sans;
-        padding: 2.15rem 0.35rem;
-        margin-bottom: 4rem;
-        padding-bottom: 3.2rem;
+        height: 17.19rem;
+        margin-bottom: 3.44rem;
 
-        border: 1px solid #000;
-        border-radius: 18px;
+        border: 0.06rem solid #000;
+        border-radius: 1.13rem;
 
         position: relative;
 
@@ -27,32 +27,36 @@
 
         &__price {
             display: inline-block;
-            text-align: center;
             vertical-align: middle;
+            text-align: center;
             width: 55%;
         }
 
         &__perks {
             display: inline-block;
-            width: 40%;
             vertical-align: middle;
-            font-size: 0.7rem;
-            line-height: 19px;
+            width: 40%;
+            margin-top: 1.56rem;
+            font-size: 0.88rem;
+            line-height: 1.19rem;
             padding-left: 1.15rem;
         }
 
         &__button {
             position: absolute;
-            left: 32%;
-            bottom: -1.4rem;
+            left: 28%;
+            top: 15.56rem;
             background-color: #000;
+
             color: white;
-            font-size: 0.65rem;
-            line-height: 17px;
+            font-size: 0.81rem;
+            line-height: 1.11rem;
             font-weight: 700;
+            font-family: $open-sans;
+
             border: 0;
-            padding: 0.8rem 3rem;
-            border-radius: 23px;
+            padding: 1rem 3rem;
+            border-radius: 1.44rem;
         }
 
         &__button--primary {
@@ -71,15 +75,15 @@
             transform: scale(1.1);
     
             .pricing__card__button--primary {
-                box-shadow: 5px 10px 14px rgb(251, 59, 100, 0.29);        
+                box-shadow: 0.31rem 0.63rem 0.88rem rgb(251, 59, 100, 0.29);        
             }
         
             .pricing__card__button--secondary {
-                box-shadow: 5px 10px 14px rgb(7, 172, 230, 0.29);
+                box-shadow: 0.31rem 0.63rem 0.88rem rgb(7, 172, 230, 0.29);
             }
         
             .pricing__card__button--tertiary {
-                box-shadow: 5px 10px 14px rgb(85, 223, 180, 0.29);
+                box-shadow: 0.31rem 0.63rem 0.88rem rgb(85, 223, 180, 0.29);
             }
         }
 
@@ -87,7 +91,7 @@
             border-color: #FB3B64;
 
             &:hover, &:active {
-                box-shadow: 5px 10px 27px rgb(251, 59, 100, 0.29); 
+                box-shadow: 0.31rem 0.63rem 1.69rem rgb(251, 59, 100, 0.29); 
             }
         }
 
@@ -95,7 +99,7 @@
             border-color: #07ACE6;
 
             &:hover, &:active {
-                box-shadow: 5px 10px 27px rgb(7, 172, 230, 0.29);
+                box-shadow: 0.31rem 0.63rem 1.69rem rgb(7, 172, 230, 0.29);
             }
         }
 
@@ -103,7 +107,7 @@
             border-color: #55DFB4;
 
             &:hover, &:active {
-                box-shadow: 5px 10px 27px rgb(85, 223, 180, 0.29);
+                box-shadow: 0.31rem 0.63rem 1.69rem rgb(85, 223, 180, 0.29);
             }
         }
     }
@@ -114,14 +118,14 @@
     &__caption {
         font-family: 'Raleway', 'offline_raleway', 'Roboto', sans-serif;
         font-weight: 700;
-        font-size: 1.4rem;
-        line-height: 24px;
+        font-size: 1.25rem;
+        line-height: 1.50rem;
     }
 
     &__value {
-        font-size: 3rem;
+        font-size: 2.88rem;
         font-weight: 300;
-        line-height: 64px;
+        line-height: 4rem;
     }
 
     &__value--primary {
@@ -138,18 +142,20 @@
 
     &__offer {
         font-family: 'Raleway', 'offline_raleway', 'Roboto', sans-serif;
-        font-size: 0.7rem;
+        font-size: 0.75rem;
         font-weight: 700;
-        line-height: 14px;
+        line-height: 0.88rem;
     }
 }
 
 .perks__list--positive {
     list-style: url('./assets/Checkbox.png');
+    margin-bottom: 1.25rem;
 }
 
 .perks__list--negative {
     list-style: url('./assets/Cross.png');
+    margin-bottom: 1.25rem;
 }
 
 @media only screen and (min-width: 1000px) {

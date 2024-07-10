@@ -3,12 +3,12 @@
 .cards {
     background-color: #f7f7f7;
     width: 100%;
-    padding: 1.15rem 1.95rem;
+    padding: 2.63rem 1.88rem;
 
     &__item {
-        border: 1px solid #e8e9ed;
+        border: 0.06rem solid #e8e9ed;
         background-color: white;
-        border-radius: 5px;
+        border-radius: 0.31rem;
         margin-bottom: 2.2rem;
         padding: 0.45rem 1.7rem;
         margin-top: 1.2rem;
@@ -32,26 +32,31 @@
 
         &__title {
             font-weight: 400;
-            font-size: 2rem;
-            line-height: 35px;
-            margin-top: 0.25rem;
+            font-size: 1.88rem;
+            line-height: 2.19rem;
+            margin-top: 1.75rem;
             padding-right: 1.8rem;
         }
 
         &__desc {
             font-family: $open-sans;
             font-weight: 400;
-            font-size: 0.9rem;
-            line-height: 19px;
-            margin-top: 0.8rem;
-            margin-bottom: 0.8rem;
+            font-size: 0.88rem;
+            line-height: 1.31rem;
+            margin-top: 2.81rem;
+            margin-bottom: 1.88rem;
+
+            &--smaller {
+                margin-bottom: 0;       
+            }
         }
 
         &__special {
             background-color: #55DFB4;
-            border: 1px solid #E8E9ED;
-            border-radius: 5px;
+            border: 0.06rem solid #E8E9ED;
+            border-radius: 0.31rem;
             padding-bottom: 1rem;
+            height: 12.19rem;
         }
 
         &--special {
@@ -79,9 +84,9 @@
 
 .trumpet-fit {
     object-fit: none;
-    height: 140px;
+    height: 11.57rem;
     width: 90%;
-    object-position: -10px 10px;
+    object-position: 0 2rem;
 }
 
 .image-big {
@@ -90,42 +95,32 @@
 
 @media only screen and (min-width: 1000px) {
     .cards {
-        margin-top: 4rem;
+        margin-top: 8.25rem;
         width: 100%;
+        padding: 0 0;
+        padding-top: 4.25rem;
+        padding-bottom: 6.56rem;
         display: flex;
         flex-direction: column;
         align-items: center;
 
         &__item {
-            width: 75%;
-            max-width: 85ch;
+            width: 80%;
+            max-width: 65rem;
+            height: 23.13rem;
             display: flex;
             flex-direction: row-reverse;
-
-            &__desc {
-                font-size: 1.1rem;
-            }
-
-            &__special {
-                margin: 0; padding: 0;
-                margin-left: 1rem;
-                flex: 1 0 auto;
-
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                width: 35%;
-            }
-
-
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 2.31rem;
+            margin-bottom: 0;
+            padding: 0 2.19rem;
 
             &__line {
                 display: block;
                 width: 85%;
                 background-color: black;
-                height: 4px;
-                margin-top: 1.4rem;
+                height: 0.25rem;
 
                 &--red {
                     background-color: #FB3B64;
@@ -140,66 +135,112 @@
                 }
             }
 
+            &__text {
+                flex: 0 0 40%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            &__title {
+                font-weight: 400;
+                font-size: 2.25rem;
+                line-height: 2.63rem;
+                max-width: 13ch;
+                margin-top: 0;
+            }
+    
+            &__desc {
+                font-family: $open-sans;
+                font-weight: 400;
+                font-size: 1rem;
+                line-height: 1.38rem;
+                margin-top: 1.88rem;
+                margin-bottom: 3.13rem;
+    
+                &--smaller {
+                    margin-bottom: 0;       
+                }
+            }
+
+            &__special {
+                margin: 0; padding: 0;
+                margin-left: 2.19rem;                
+                flex: 0 0 calc(40% - 2.19rem);
+                height: 100%;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                & img {
+                    height: auto;
+                    width: 70%;
+                    max-width: 16.63rem;
+                }
+            }
+
             &--special {
                 background-color: #f7f7f7;
                 border: 0;
                 flex-direction: row;
+                align-items: stretch;
+                padding: 0 0;
 
                 &__title, &__desc {                    
-                    padding: 0.45rem 1.7rem;
+                    padding: 0 0;
+                    padding-right: 18%;
+                }
+
+                &__title {
+                    max-width: 20ch;
+                }
+
+                &__desc {
+                    margin-bottom: 3.13rem;
                 }
 
                 &__line {
-                    margin: 0 1.7rem;
                     width: 68%;
                 }
 
                 &__text {
-                    border: 1px solid #e8e9ed;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    border: 0.06rem solid #e8e9ed;
                     background-color: white;
-                    border-radius: 5px;
-                    padding: 0.45rem 1.7rem;
-                    width: 60%;
-                    flex: 1 0 auto;
+                    border-radius: 0.31rem;
+                    padding: 0.45rem 2.19rem;
+                    flex: 1 0 60%;
                 }
             }
 
             &__image {
-                width: 60%;
-                padding-bottom: 1rem;
-                display: flex;
-                justify-content: flex-end;
-
-                & img {
-                    max-width: 100%;
-                }
+                width: 100%;
+                flex: 0 0 45%;
 
                 &--primary {            
                     background: url('./assets/ellipse-red-big.png') no-repeat;
                     background-position: center; 
                     background-size: 70%;  
-                    background-position-x: 115%; 
-                    background-position-y: 5%;     
-                    padding-top: 12%;
-                    padding-right: 1rem;
+                    background-position-x: 95%; 
+                    background-position-y: 18%;     
+                    padding-top: 10%;
+                    padding-right: 4%;
                 }
 
                 &--secondary {            
                     background: url('./assets/ellipse-blue-big.png') no-repeat;
                     background-position: center; 
-                    background-size: 70%;  
-                    background-position-x: 1rem;      
-                    padding-top: 2.5rem;
-                    padding-left: 1rem;
+                    background-position-x: 35%;  
+                    background-position-y: 20%;
+                    background-size: 70%;
+                    background-clip: padding-box;
+                    padding-top: 4%;
+                    padding-left: 3.5%;
                 }
-            }
-
-            &__text {
-                width: 50%;
-                padding: 2rem 0;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
             }
 
             &--reverse {
@@ -221,7 +262,21 @@
     .trumpet-fit {
         object-fit: cover;
         height: auto;
-        max-height: 70%;
-        width: 95%;
+        max-height: 100;
+        width: 100%;
+    }
+
+    .macbook {
+        max-height: 13.69rem;
+        max-width: 24.15rem;
+        height: auto;
+        width: 100%;
+    }
+
+    .iphone {
+        max-height: 20.50rem;
+        max-width: 26.63rem;
+        height: auto;
+        width: 100%;
     }
 }

@@ -12,6 +12,7 @@
 </head>
 <body>
     <header class="header">
+        <div class="header__scrollbar"></div>
         <div class="header__title"><span>OXYGENShop</span></div>
         <nav class="header__nav">
             <img src="./assets/Menu.png" class="header__nav__img" tabindex="1" alt="Menu" />
@@ -27,9 +28,10 @@
     </header>
     <main class="content">
         <section class="sell-more">
-            <p class="sell-more__title">Sell More!</p>
-            <p class="sell-more__desc">Open shop on our platform and increase your sales</p>
+            <div class="sell-more__title">Sell More!</div>
+            <div class="sell-more__desc">Open shop on our platform and increase your sales</div>
             <button class="sell-more__button">Open your shop</button>
+            <div class="sell-more__background"></div>
         </section>
         <section class="stats">
             <p class="stats__title">The most popular sales platform in the country</p>
@@ -40,7 +42,7 @@
                         <img src="./assets/Person.png" class="floating-image" alt="Person" />
                     </div>
                     <p class="stats__card__amount">100000+</p>
-                    <p class="stats__card__desc">daily entries</p>
+                    <p class="stats__card__desc"><span>daily entries</span></p>
                 </div>
                 <div class="stats__card">
                     <div class="stats__card__image">
@@ -49,7 +51,7 @@
                         
                     </div>
                     <p class="stats__card__amount">2000000+</p>
-                    <p class="stats__card__desc">seen products every day</p>
+                    <p class="stats__card__desc"><span>seen products every day</span></p>
                 </div>
                 <div class="stats__card">
                     <div class="stats__card__image">
@@ -58,7 +60,7 @@
                         
                     </div>
                     <p class="stats__card__amount">10000+</p>
-                    <p class="stats__card__desc">added posts daily</p>
+                    <p class="stats__card__desc"><span>added posts daily</span></p>
                 </div>
             </div>
         </section>
@@ -66,7 +68,7 @@
             <div class="cards__item">
                 <div class="cards__item__image cards__item__image--primary">
                     <img src="./assets/macbook.png" class="image-small" alt="macbook" />
-                    <img src="./assets/macbook-big.png" class="image-big" alt="macbook" />
+                    <img src="./assets/macbook-big.png" class="image-big macbook" alt="macbook" />
                 </div>
                 <div class="cards__item__text">
                     <p class="cards__item__title">Be always first</p>
@@ -77,7 +79,7 @@
             <div class="cards__item cards__item--reverse">
                 <div class="cards__item__image cards__item__image--secondary">
                     <img src="./assets/iphone.png" class="image-small" alt="iphone" />
-                    <img src="./assets/iphone-big.png" class="image-big" alt="iphone" />
+                    <img src="./assets/iphone-big.png" class="image-big iphone" alt="iphone" />
                 </div>
                 <div class="cards__item__text">
                     <p class="cards__item__title">Your shop is where you are!</p>
@@ -88,7 +90,7 @@
             <div class="cards__item cards__item--special">
                 <div class="cards__item__text cards__item--special__text">
                     <p class="cards__item__title cards__item--special__title">Increase recognition in your brand!</p>
-                    <p class="cards__item__desc cards__item--special__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    <p class="cards__item__desc cards__item__desc--smaller cards__item--special__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
                     <div class="cards__item__line cards__item--special__line cards__item__line--green"></div>
                 </div>
                 <div class="cards__item__special">
@@ -172,7 +174,7 @@
                 <input id="contact-name" type="text" class="question__input" />
 
                 <label for="contact-mail" class="question__label">Email</label>
-                <input id="contact-mail" type="text" class="question__input" />
+                <input id="contact-mail" type="text" class="question__input question__input--last" />
 
                 <div class="question__checkbox">
                     <input type="checkbox" class="question__checkbox__input" id="contact-consent" /><label for="contact-consent" class="question__checkbox__label"></label>

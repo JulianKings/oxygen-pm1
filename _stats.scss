@@ -1,10 +1,11 @@
 .stats {
-    padding: 1.15rem 1.95rem;
+    padding: 0 2.25rem;
+    margin-bottom: 3.13rem;
 
     &__title {
-        font-size: 1.9rem;
+        font-size: 1.88rem;
         font-weight: 300;
-        line-height: 35px;
+        line-height: 2.19rem;
         text-align: center;
     }
 
@@ -19,20 +20,25 @@
         }
 
         &__amount {
-            font-size: 1.35rem;
-            line-height: 24px;
+            font-size: 1.25rem;
+            line-height: 1.5rem;
             font-weight: 800;
+            letter-spacing: 0.37rem;
             padding-top: 0.65rem;
         }
 
         &__desc {
             color: #A5A5A5;
-            font-size: 1.05rem;
+            font-size: 1rem;
+            line-height: 1.19rem;
             font-weight: 400;
-            line-height: 20px;
-            padding-top: 0.8rem;
-            padding-left: 4.2rem;
-            padding-right: 4.2rem;
+            padding-top: 1.25rem;
+
+            & span {
+                margin: 0 auto;
+                display: block;
+                max-width: 13ch;
+            }
         }
     }
 }
@@ -44,30 +50,62 @@
 }
 
 .floating-image-eye {
-    left: calc(45% + 0.6rem);
+    left: calc(45% + 0.3rem);
     top: 0.8rem;
 }
 
 @media only screen and (min-width: 1000px) {
     .stats {
-        margin-top: 4rem;
+        margin-top: 1.38rem;
+        width: 100%;
+        margin-bottom: 0;
 
         &__container {
+            margin-top: 6.44rem;
             display: flex;
-            justify-content: space-around;
-            padding: 0 8%;
-            padding-bottom: 6rem;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 12%;
+        }
+
+        &__title {
+            font-size: 2.25rem;
+            font-weight: 400;
+            line-height: 2.63rem;
+            text-align: center;
+        }
+
+        &__card {
+            margin-top: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &__amount {
+                padding-top: 0.75rem;
+            }
+
+            &__desc {
+                font-size: 1rem;
+                line-height: 1.19rem;
+                padding-top: 1.19rem;
+            }
+
+            &__image {
+                width: 3.88rem;
+                height: 3.88rem;
+            }
         }
     }
 
     .floating-image {
         position: absolute;
-        left: calc(48% + 1.1rem);
+        left: calc(45% + 0.4rem);
         top: 0.4rem;
     }
     
     .floating-image-eye {
-        left: calc(48% + 0.6rem);
+        left: calc(30% + 0.1rem);
         top: 0.8rem;
     }
 }
