@@ -46,10 +46,17 @@
     .footer {
         height: 5.56rem;
         display: flex;
-        align-items: center;
+        justify-content: center;
+        
+        &__container {
+            flex: 1 0 auto;
+            display: flex;
+            align-items: center;
+            max-width: 115ch;
+        }
 
         &__desc {
-            padding-left: 15%;
+            padding-left: 0.81rem;
 
             &__title {
                 span {
