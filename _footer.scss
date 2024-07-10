@@ -44,8 +44,29 @@
 
 @media only screen and (min-width: 1000px) {
     .footer {
+        height: 5.56rem;
+        display: flex;
+        align-items: center;
+
         &__desc {
             padding-left: 15%;
+
+            &__title {
+                span {
+                    display: none;
+                }
+
+                &:after {
+                    width: 100%;
+                    content: 'OXYGEN Shop';
+                    display: inline-block;
+                    text-align: left;
+                    font-size: 1.63rem;
+                    font-weight: 300;
+                    line-height: 1.88rem;
+                    color: #08A6E4;
+                }
+            }
         }
     }
 }
