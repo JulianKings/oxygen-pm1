@@ -145,8 +145,24 @@
 
 @media only screen and (min-width: 1000px) {
     .question {
-        max-width: 85ch;
+        max-width: 115ch;
+        width: 80%;
         display: flex;
+        justify-content: center;
+        padding-top: 0;
+        gap: 3.5rem;
+        margin-top: 9.56rem;
+
+        &__title {
+            font-size: 3.06rem;
+            font-weight: 400;
+            line-height: 3.60rem;
+            margin-bottom: 1.38rem;
+        }
+    
+        &__desc {
+            margin-bottom: 2.63rem;
+        }
 
         &__checkbox {
             &__label-text {
@@ -154,8 +170,20 @@
             }
         }
 
+        &__input {
+            margin-bottom: 2.63rem;
+
+            &--last {
+                margin-bottom: 1.88rem;
+            }
+        }
+
+
+        &__button {
+            margin-top: 1.25rem;
+        }
+
         &__information {
-            padding-top: 1.5rem;
             display: flex;
             flex-direction: column;
             width: 50%;
@@ -165,6 +193,7 @@
             width: 46%;
             display: flex;
             flex-direction: column;
+            margin-top: 0;
         }
     }
 }

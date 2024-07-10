@@ -72,7 +72,7 @@
         }
 
         &:hover, &:active {
-            transform: scale(1.1);
+            transform: scale(1.05);
     
             .pricing__card__button--primary {
                 box-shadow: 0.31rem 0.63rem 0.88rem rgb(251, 59, 100, 0.29);        
@@ -168,7 +168,7 @@
         &__title {
             margin-top: 7.94rem;
             font-weight: 400;
-            line-height: 2.56rem;
+            line-height: 2.63rem;
             text-align: center;
             margin-bottom: 0;
         }
@@ -180,28 +180,30 @@
             width: 100%;
             flex: 1 0 auto;
             max-width: 115ch;
+            margin-top: 4.44rem;
         }
 
         &__card {
             width: 31%;
-            height: 30.31rem;
+            height: 29.31rem;
             flex: 1 0 auto;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
+            margin-bottom: 0; padding-bottom: 0;
 
             &__button {
-                top: 28.735rem;
+                top: 27.735rem;
                 left: 28%;
                 height: 3.13rem;
             }
 
             &__price {
-                margin-bottom: 3rem;
+                margin-bottom: 4.31rem;
+                margin-top: 2.13rem;
 
                 &--offer {
-                    margin-bottom: 2.5rem;
+                    margin-bottom: 3.13rem;
                 }
             }
 

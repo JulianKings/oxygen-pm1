@@ -344,12 +344,12 @@ body {
 }
 .cards__item__image--primary {
   background: url("./assets/Ellipse_red-2.png") no-repeat;
-  background-position: right 11% bottom 75%;
+  background-position: calc(50% + 3.6rem) 25%;
   padding-top: 2.5rem;
 }
 .cards__item__image--secondary {
   background: url("./assets/Ellipse_blue-2.png") no-repeat;
-  background-position: center;
+  background-position: calc(50% - 1.2rem) 50%;
   padding-top: 1.5rem;
 }
 .cards__item__title {
@@ -384,7 +384,6 @@ body {
   padding: 1.15rem 1.7rem;
 }
 .cards__item--special__desc {
-  font-size: 1.1rem;
   margin-top: 0;
 }
 .cards__item__line {
@@ -620,7 +619,7 @@ body {
   background-color: #55DFB4;
 }
 .pricing__card:hover, .pricing__card:active {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .pricing__card:hover .pricing__card__button--primary, .pricing__card:active .pricing__card__button--primary {
   box-shadow: 0.31rem 0.63rem 0.88rem rgba(251, 59, 100, 0.29);
@@ -697,7 +696,7 @@ body {
   .pricing__title {
     margin-top: 7.94rem;
     font-weight: 400;
-    line-height: 2.56rem;
+    line-height: 2.63rem;
     text-align: center;
     margin-bottom: 0;
   }
@@ -708,26 +707,29 @@ body {
     width: 100%;
     flex: 1 0 auto;
     max-width: 115ch;
+    margin-top: 4.44rem;
   }
   .pricing__card {
     width: 31%;
-    height: 30.31rem;
+    height: 29.31rem;
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
   .pricing__card__button {
-    top: 28.735rem;
+    top: 27.735rem;
     left: 28%;
     height: 3.13rem;
   }
   .pricing__card__price {
-    margin-bottom: 3rem;
+    margin-bottom: 4.31rem;
+    margin-top: 2.13rem;
   }
   .pricing__card__price--offer {
-    margin-bottom: 2.5rem;
+    margin-bottom: 3.13rem;
   }
   .pricing__card__perks {
     width: 100%;
@@ -863,14 +865,36 @@ body {
 
 @media only screen and (min-width: 1000px) {
   .question {
-    max-width: 85ch;
+    max-width: 115ch;
+    width: 80%;
     display: flex;
+    justify-content: center;
+    padding-top: 0;
+    gap: 3.5rem;
+    margin-top: 9.56rem;
+  }
+  .question__title {
+    font-size: 3.06rem;
+    font-weight: 400;
+    line-height: 3.6rem;
+    margin-bottom: 1.38rem;
+  }
+  .question__desc {
+    margin-bottom: 2.63rem;
   }
   .question__checkbox__label-text {
     padding-right: 0;
   }
+  .question__input {
+    margin-bottom: 2.63rem;
+  }
+  .question__input--last {
+    margin-bottom: 1.88rem;
+  }
+  .question__button {
+    margin-top: 1.25rem;
+  }
   .question__information {
-    padding-top: 1.5rem;
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -879,6 +903,7 @@ body {
     width: 46%;
     display: flex;
     flex-direction: column;
+    margin-top: 0;
   }
 }
 @media only screen and (min-width: 1000px) {
@@ -927,8 +952,33 @@ body {
 }
 
 @media only screen and (min-width: 1000px) {
+  .footer {
+    height: 5.56rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 3.69rem;
+  }
+  .footer__container {
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+    max-width: 115ch;
+  }
   .footer__desc {
-    padding-left: 15%;
+    padding-left: 0.81rem;
+  }
+  .footer__desc__title span {
+    display: none;
+  }
+  .footer__desc__title:after {
+    width: 100%;
+    content: "OXYGEN Shop";
+    display: inline-block;
+    text-align: left;
+    font-size: 1.63rem;
+    font-weight: 300;
+    line-height: 1.88rem;
+    color: #08A6E4;
   }
 }
 

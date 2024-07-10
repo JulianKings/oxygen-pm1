@@ -19,13 +19,13 @@
 
             &--primary {
                 background: url('./assets/Ellipse_red-2.png') no-repeat;
-                background-position: right 11% bottom 75%;            
+                background-position: calc(50% + 3.6rem) 25%;            
                 padding-top: 2.5rem;
             }
 
             &--secondary {            
                 background: url('./assets/Ellipse_blue-2.png') no-repeat;
-                background-position: center;          
+                background-position: calc(50% - 1.2rem) 50%;          
                 padding-top: 1.5rem;
             }
         }
@@ -68,9 +68,7 @@
             }
 
             &__desc {
-                font-size: 1.1rem;
                 margin-top: 0;
-
             }
 
         }
