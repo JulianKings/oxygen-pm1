@@ -570,6 +570,17 @@ body {
   margin-bottom: 0.88rem;
   margin-top: 3.38rem;
 }
+.pricing__unit-selector {
+  padding: 0.5rem 0.2rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.pricing__unit-selector__select {
+  margin: 0 auto;
+  border: 0;
+  background-color: white;
+  font-size: 1.1rem;
+}
 .pricing__card {
   font-family: "Open Sans", "offline_open_sans", "Roboto", sans-serif;
   height: 17.19rem;
