@@ -170,18 +170,28 @@
             </div>
 
             <div class="question__form">
-                <label for="contact-name" class="question__label">Name</label>
-                <input id="contact-name" type="text" class="question__input" />
+                <form method="post" action="" id="question-form">
+                    <div class="question__form__error"></div>
 
-                <label for="contact-mail" class="question__label">Email</label>
-                <input id="contact-mail" type="text" class="question__input question__input--last" />
+                    <label for="contact-name" class="question__label">Name</label>
+                    <div class="question__input__container">
+                        <input id="contact-name" type="text" class="question__input" />
+                        <span></span>
+                    </div>
+                    
+                    <label for="contact-mail" class="question__label">Email</label>
+                    <div class="question__input__container">
+                        <input id="contact-mail" type="text" class="question__input question__input--last" />
+                        <span></span>
+                    </div>
 
-                <div class="question__checkbox">
-                    <input type="checkbox" class="question__checkbox__input" id="contact-consent" /><label for="contact-consent" class="question__checkbox__label"></label>
-                    <label for="contact-consent" class="question__checkbox__label-text">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</label>
-                </div>
+                    <div class="question__checkbox">
+                        <input type="checkbox" class="question__checkbox__input" id="contact-consent" /><label for="contact-consent" class="question__checkbox__label"></label>
+                        <label for="contact-consent" class="question__checkbox__label-text">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</label>
+                    </div>
 
-                <button type="button" class="question__button">Send</button>
+                    <button type="submit" class="question__button">Send</button>
+                </form>
             </div>
         </section>
         <section class="scroll-top">

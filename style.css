@@ -776,6 +776,18 @@ body {
 .question__form {
   margin-top: 2.87rem;
 }
+.question__form__error {
+  display: none;
+  white-space: pre-line;
+  background-color: #500000;
+  color: white;
+  margin: 0.4rem 0.6rem;
+  padding: 0.4rem 0.4rem;
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1.5rem;
+}
 .question__label {
   display: block;
   text-transform: uppercase;
@@ -794,7 +806,14 @@ body {
   color: #95989A;
   margin-bottom: 2.56rem;
   padding: 0.4rem 0.2rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
+}
+.question__input__error {
+  border-color: #500000;
+  padding-right: 2rem;
+}
+.question__input__error:focus {
+  border-color: #500000;
 }
 .question__input--last {
   margin-bottom: 1.94rem;
@@ -835,9 +854,6 @@ body {
   color: #707070;
   padding-left: 0.4rem;
 }
-.question__checkbox__input {
-  display: none;
-}
 .question__checkbox__input + label {
   display: inline-block;
   width: 1.5rem;
@@ -860,6 +876,12 @@ body {
   position: absolute;
   top: 0.38rem;
   left: 0.38rem;
+}
+.question__checkbox__input {
+  display: none;
+}
+.question__checkbox__input__error + label {
+  border: 0.06rem solid #500000;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -889,6 +911,43 @@ body {
   }
   .question__input--last {
     margin-bottom: 1.88rem;
+  }
+  .question__input__container {
+    position: relative;
+  }
+  .question__input__error {
+    border-color: #500000;
+    padding-right: 2rem;
+  }
+  .question__input__error:focus {
+    border-color: #500000;
+  }
+  .question__input__error + span::before {
+    position: absolute;
+    content: url("./assets/alert-triangle.svg");
+    width: 0.94rem;
+    height: 0.94rem;
+    padding: 0.2rem;
+    padding-left: 4%;
+    font-size: 0.7rem;
+    right: 1.45rem;
+    top: 0rem;
+    border-radius: 0.25rem;
+  }
+  .question__input__valid {
+    padding-right: 2rem;
+  }
+  .question__input__valid + span::before {
+    position: absolute;
+    content: url("./assets/check.svg");
+    width: 1.25rem;
+    height: 1.25rem;
+    padding: 0.2rem;
+    padding-left: 4%;
+    font-size: 0.7rem;
+    right: 1.1rem;
+    top: 0.05rem;
+    border-radius: 0.25rem;
   }
   .question__button {
     margin-top: 1.25rem;
