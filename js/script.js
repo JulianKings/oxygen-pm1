@@ -497,29 +497,26 @@ class Slider {
         // update and add animation for slide
         this.sliderImages.forEach((image, index) => {
             if(index === this.currentSlide)
-            {
-                // visible image
-                image.style['display'] = 'block';
-                image.style['z-index'] = 10;
-                if(!initializing)
                 {
-                    image.style['animation'] = ((right) ? 'slideLeft' : 'slideRight') + ' 2s ease-in-out';
-                }
-            } else {
-                if(image.style.display !== 'none')
-                {
-                    image.style['z-index'] = -1;
+                    // visible image
+                    image.style['z-index'] = (5+index);
                     if(!initializing)
                     {
-                        awaitPromise(2).then(() => {
-                            image.style['display'] = 'none';
-                        })
-
-                    } else {
-                        image.style['display'] = 'none';
+                        image.style['animation'] = ((right) ? 'slideLeft' : 'slideRight') + ' 1s ease-in-out';
                     }
+                } else {
+                    if(right && index === this.obtainNextImage())
+                    {
+                        image.style['z-index'] = -1;
+                    }
+                    if(!right && index === this.obtainPrevImage())
+                    {
+                        image.style['z-index'] = -1;
+                    } else {
+                        image.style['z-index'] = -30;
+                    }
+                    image.style['animation'] = 'null';
                 }
-            }
         });
 
         this.dotList.forEach((dot, index) =>
@@ -551,17 +548,19 @@ class Slider {
             if(index === this.currentSlide)
             {
                 // visible image
-                image.style['display'] = 'block';
-                image.style['z-index'] = 10;
+                image.style['z-index'] = (5+index);
                 image.style['animation'] = ((right) ? 'slideLeft' : 'slideRight') + ' 1s ease-in-out';
             } else {
-                if(image.style.display !== 'none')
+                if(right && index === this.obtainNextImage())
                 {
                     image.style['z-index'] = -1;
-                    awaitPromise(1).then(() => {
-                        image.style['display'] = 'none';
-                    });
+                } else if(!right && index === this.obtainPrevImage())
+                {
+                    image.style['z-index'] = -1;
+                } else {
+                    image.style['z-index'] = -30;
                 }
+                image.style['animation'] = 'null';
             }
         });
 
