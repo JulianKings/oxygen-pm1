@@ -843,6 +843,7 @@ body {
 .slider {
   margin: 1.2rem 0;
   width: 100%;
+  margin-top: 1.56rem;
 }
 .slider__container {
   width: 90%;
@@ -915,6 +916,12 @@ body {
   }
   100% {
     right: 0;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .slider {
+    max-width: 115ch;
+    margin-top: 9.56rem;
   }
 }
 .question {
