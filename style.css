@@ -118,7 +118,10 @@ body {
 @media only screen and (min-width: 1000px) {
   .modal__box {
     width: 50%;
-    left: 25%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 65ch;
   }
 }
 .header {

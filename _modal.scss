@@ -92,7 +92,9 @@
     .modal {
         &__box {
             width: 50%;
-            left: 25%;
+            left: 0; right: 0;
+            margin: 0 auto;
+            max-width: 65ch;
         }
     }
 }

@@ -455,7 +455,7 @@ function closeModal()
 
 // executions
 importUnits();
-if(!localStorage.getItem('modal'))
+if(!localStorage.getItem('modal') || true)
 {
     awaitPromise(5).then(() => {
         openModal();
