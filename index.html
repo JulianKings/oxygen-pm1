@@ -11,6 +11,28 @@
     <title>Oxygen Shop</title>
 </head>
 <body>
+    <aside class="modal">
+        <div class="modal__box">
+            <div class="modal__box__close">
+                <img src="./assets/cross.png" alt="Close" onclick="closeModal();" />
+            </div>
+            <div class="modal__box__title">Subscribe to our newsletter!</div>
+            <div class="modal__box__desc">Subscribe to our newsletter to be in touch with the latest advances in technology.</div>
+            <div class="modal__box__form">
+                <form method="post" action="" id="newsletter-form">
+                    <div class="modal__box__form__error"></div>                    
+                    <label for="newsletter-mail" class="question__label">Email</label>
+                    <div class="question__input__container">
+                        <input id="newsletter-mail" type="text" class="question__input modal__box__form__input question__input--last" />
+                        <span></span>
+                    </div>
+
+                    <button type="submit" id="modal__box__form__button" class="question__button">Send</button>
+                </form>
+            </div>
+        </div>
+    </aside>
+
     <header class="header">
         <div class="header__scrollbar"></div>
         <div class="header__title"><span>OXYGENShop</span></div>

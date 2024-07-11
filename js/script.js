@@ -7,23 +7,29 @@ const errorList = [];
 const inputList = document.querySelectorAll('.question__input');
 const formElement = document.querySelector('#question-form');
 const pricingSelector = document.querySelector('.pricing__unit-selector__select');
-
 let USDtoEur = 0;
 let USDtoGBP = 0;
-
+const modalElement = document.querySelector('.modal');
+const modalBoxElement = document.querySelector('.modal__box');
+const newsletterErrorList = [];
+const newsletterErrorContainer = document.querySelector('.modal__box__form__error');
+const newsletterFormElement = document.querySelector('#newsletter-form');
 
 // events
 inputList.forEach((element) => {
     element.addEventListener('change', (event) => {
         onInputChange(event.target);
     })
-})
-
-pricingSelector.addEventListener('change', (event) => onSelectChange(event.target));
+});
 
 document.addEventListener('scroll', () => {
     const percentage = ((document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100);
-    scrollStatusBar.style['width'] = Math.round(percentage) + '%';
+    const roundedPercentage = Math.round(percentage);
+    if(roundedPercentage === 25 && (!localStorage.getItem('modal')) && modalElement.style.display !== 'block')
+    {
+        openModal();
+    }
+    scrollStatusBar.style['width'] = roundedPercentage + '%';
 })
  
 menuIcon.addEventListener('click', (event) => alternateMenu(event.target));
@@ -41,7 +47,23 @@ menuIcon.addEventListener('blur', (event) => {
 });
 
 formElement.addEventListener('submit', (event) => validateForm(event));
- 
+
+pricingSelector.addEventListener('change', (event) => onSelectChange(event.target));
+
+newsletterFormElement.addEventListener('submit', (event) => validateNewsletterForm(event));
+
+modalElement.addEventListener('click', () => closeModal());
+modalBoxElement.addEventListener('click', (event) => {
+    event.stopPropagation();
+});
+
+//keypress esc event
+document.body.addEventListener('keyup', (event) => {
+    if (event.key == "Escape" && modalElement.style.display === 'block') {
+        closeModal();
+    }
+});
+
 // functions
 // hamburger menu functionality
 function alternateMenu(target)
@@ -87,14 +109,19 @@ function onInputChange(target)
 
     runValidation([target]);
 
-    updateErrorContainer();
+    if(target.id === 'newsletter-mail')
+    {
+        updateNewsletterErrorContainer();
+    } else {
+        updateErrorContainer();
+    }
 }
 
 function validateForm(event)
 {
     event.preventDefault();
 
-    const inputElements = document.querySelectorAll('.question__checkbox__input, .question__input');
+    const inputElements = document.querySelectorAll('.question__checkbox__input, input.question__input:not(.modal__box__form__input)');
     const validationResult = runValidation(inputElements);
 
     if(!validationResult)
@@ -197,6 +224,25 @@ function runValidation(elementArray)
                     message: 'You have to give consent to share your data with us in order to continue'
                 });
             }    
+        }
+
+        // handle mail
+        if(target.id === 'newsletter-mail')
+        {
+            if(validateEmail(target.value))
+            {
+                target.classList.add('question__input__valid');
+                cleanupNewsletterErrors(target.id);
+            } else {
+                validationResult = false;
+                target.classList.add('question__input__error');
+                cleanupNewsletterErrors(target.id);
+                newsletterErrorList.push({
+                    origin_id: target.id,
+                    message: 'Invalid Email'
+                });
+            }
+    
         }
     });
 
@@ -307,5 +353,111 @@ function roundToTwoDecimals(number)
     return Math.round((number + Number.EPSILON) * 100) / 100;
 }
 
+// newsletter functions
+function cleanupNewsletterErrors(input_id)
+{
+    const clearIndex = [];
+    newsletterErrorList.forEach((error, index) => {
+        if(error.origin_id === input_id)
+        {
+            clearIndex.push(index);
+        }
+    });
+
+    clearIndex.forEach((index) => {
+        newsletterErrorList.splice(index, 1);
+    });
+}
+
+function updateNewsletterErrorContainer()
+{
+    if(newsletterErrorList.length > 0)
+    {
+        newsletterErrorContainer.style['display'] = 'block';
+        let errorResult = "We've found the following errors: \r\n";
+        newsletterErrorList.forEach((error) => {
+            errorResult += '- ' + error.message + "\r\n";
+        });
+
+        newsletterErrorContainer.textContent = (errorResult);
+    } else {
+        newsletterErrorContainer.style['display'] = 'none';
+    }
+}
+
+function validateNewsletterForm(event)
+{
+    event.preventDefault();
+
+    const inputElement = document.querySelector('.modal__box__form__input');
+    const validationResult = runValidation([inputElement]);
+
+    if(!validationResult)
+    {
+        updateNewsletterErrorContainer();
+    } else {
+        // send data
+        const data = {}
+        data[inputElement.id] = inputElement.value;
+
+        fetch("https://jsonplaceholder.typicode.com/posts", { 
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json; charset=UTF-8'
+            },
+            mode: "cors",
+            dataType: 'json',
+            body: JSON.stringify(data),
+        }).then((response) => {
+            if (response.status >= 400) {
+                throw new Error("could not reach server: " + response.status);
+            }
+
+            return response.json();
+
+        })
+        .then((response) => {
+            console.log(response);
+         })
+        .catch((error) => {
+            throw new Error(error);
+        });;
+    }
+}
+
+function awaitPromise(time)
+{
+    return new Promise(resolve => {
+        setTimeout(resolve, time * 1000);
+    })
+}
+
+function openModal()
+{
+    if(modalElement.style.display === 'none' || modalElement.style.display === '')
+    {
+        modalElement.style['display'] = 'block';
+        modalBoxElement.style['animation'] = 'slideDown 1s ease-in-out';
+    }
+}
+
+function closeModal()
+{
+    if(!localStorage.getItem('modal') || true)
+    {
+        modalBoxElement.style['animation'] = 'slideUp 2.5s ease-in-out';
+        awaitPromise(2).then(() => {
+            modalElement.style['display'] = 'none';
+            localStorage.setItem('modal', 'open');
+        });
+    }
+}
+
 // executions
 importUnits();
+if(!localStorage.getItem('modal'))
+{
+    awaitPromise(5).then(() => {
+        openModal();
+    });
+}
