@@ -95,6 +95,38 @@ function validateForm(event)
         updateErrorContainer();
     } else {
         // send data
+        const data = {}
+        inputElements.forEach((input) => {
+            if(input.id === 'contact-consent')
+            {
+                data['contact-consent'] = input.checked;
+            } else {
+                data[input.id] = input.value;
+            }
+        });
+
+        fetch("https://jsonplaceholder.typicode.com/posts", { 
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json; charset=UTF-8'
+            },
+            mode: "cors",
+            dataType: 'json',
+            body: JSON.stringify(data),
+        }).then((response) => {
+            if (response.status >= 400) {
+                throw new Error("could not reach server: " + error);
+            }
+
+            return response.json();
+
+        })
+        .then((response) => {
+            console.log(response);
+         })
+        .catch((error) => {
+            throw new Error(error);
+        });;
     }
 }
 
@@ -144,13 +176,13 @@ function runValidation(elementArray)
         {
             if(target.checked)
             {
-                validationResult = false;
                 if(target.classList.contains('question__checkbox__input__error'))
                 {
                     target.classList.remove('question__checkbox__input__error');            
                 }
                 cleanupErrors(target.id);
             } else {
+                validationResult = false;
                 target.classList.add('question__checkbox__input__error');
                 cleanupErrors(target.id);
                 errorList.push({
