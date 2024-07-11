@@ -140,6 +140,19 @@ body {
   top: 0;
   left: 0;
 }
+.header__return-top {
+  height: 2.5rem;
+  width: 2.5rem;
+  position: fixed;
+  bottom: 6.56rem;
+  right: 1rem;
+  visibility: hidden;
+  z-index: 300;
+}
+.header__return-top img {
+  width: 100%;
+  height: 100%;
+}
 .header__title {
   display: inline-block;
   width: 80%;
@@ -312,6 +325,7 @@ body {
   .sell-more__background {
     margin-top: -0.5rem;
     background: url("./assets/background.png") no-repeat;
+    background-size: cover;
     height: 37.13rem;
     background-position: center;
   }

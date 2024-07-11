@@ -14,6 +14,7 @@ const modalBoxElement = document.querySelector('.modal__box');
 const newsletterErrorList = [];
 const newsletterErrorContainer = document.querySelector('.modal__box__form__error');
 const newsletterFormElement = document.querySelector('#newsletter-form');
+const returnElement = document.querySelector('.header__return-top');
 
 // events
 inputList.forEach((element) => {
@@ -29,6 +30,16 @@ document.addEventListener('scroll', () => {
     {
         openModal();
     }
+
+    if(roundedPercentage < 30 && returnElement.style.visibility !== 'hidden')
+    {
+        returnElement.style['visibility'] = 'hidden';
+    } else if(roundedPercentage > 30 && returnElement.style.visibility !== 'visible')
+    {
+        returnElement.style['visibility'] = 'visible';
+    }
+        
+
     scrollStatusBar.style['width'] = roundedPercentage + '%';
 })
  
