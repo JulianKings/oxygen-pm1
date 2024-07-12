@@ -451,6 +451,15 @@ function validateNewsletterForm(event)
         })
         .then((response) => {
             console.log(response);
+            let result = 'Form send successfully: \n';
+            for (const key in response)
+            {
+                if(response.hasOwnProperty(key))
+                {
+                    result += key + ': ' + response[key] + '\n';
+                }
+            }
+            alert(result);
          })
         .catch((error) => {
             throw new Error(error);
