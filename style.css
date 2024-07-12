@@ -147,8 +147,10 @@ body {
   position: fixed;
   bottom: 6.56rem;
   right: 1rem;
-  visibility: hidden;
   z-index: 300;
+}
+.header__return-top--hidden {
+  visibility: hidden;
 }
 .header__return-top img {
   width: 100%;
@@ -173,7 +175,12 @@ body {
   display: block;
   max-height: 0;
   overflow: hidden;
+  padding-top: 0;
   transition: max-height 0.8s ease-in-out, padding-top 0.3s ease-in-out;
+}
+.header__nav__list--open {
+  max-height: 40vh;
+  padding-top: 2.5rem;
 }
 .header__nav__img {
   margin-bottom: 0.25rem;
@@ -235,6 +242,10 @@ body {
     list-style-type: none;
     justify-content: space-between;
     align-items: stretch;
+  }
+  .header__nav__list--open {
+    padding-top: 0;
+    max-height: 50vh;
   }
   .header__nav--open {
     flex: 1 0 auto;
@@ -646,8 +657,8 @@ body {
   .trumpet-fit {
     object-fit: cover;
     height: auto;
-    max-height: 100;
-    width: 100%;
+    max-height: 100rem;
+    width: 120%;
   }
   .macbook {
     max-height: 13.69rem;

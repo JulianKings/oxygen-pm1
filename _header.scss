@@ -24,8 +24,11 @@
         position: fixed;
         bottom: 6.56rem;
         right: 1rem;
-        visibility: hidden;
         z-index: 300;
+
+        &--hidden {
+            visibility: hidden;
+        }
 
         & img {
             width: 100%;
@@ -53,8 +56,14 @@
             display: block;
             max-height: 0;
             overflow: hidden;
+            padding-top: 0;
 
             transition: max-height 0.8s ease-in-out, padding-top 0.3s ease-in-out;
+
+            &--open {
+                max-height: 40vh;
+                padding-top: 2.5rem;
+            }
         }
 
         &__img {
@@ -123,7 +132,12 @@
                 display: flex;
                 list-style-type: none;
                 justify-content: space-between;
-                align-items: stretch;                
+                align-items: stretch;    
+                
+                &--open {
+                    padding-top: 0;
+                    max-height: 50vh;
+                }
             }
 
             &--open {
