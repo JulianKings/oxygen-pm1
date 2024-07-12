@@ -16,11 +16,19 @@ const newsletterErrorContainer = document.querySelector('.modal__box__form__erro
 const newsletterFormElement = document.querySelector('#newsletter-form');
 const returnElement = document.querySelector('.header__return-top');
 
-// events
-inputList.forEach((element) => {
-    element.addEventListener('change', (event) => {
-        onInputChange(event.target);
-    })
+// events 
+menuIcon.addEventListener('click', (event) => alternateMenu(event.target));
+menuIcon.addEventListener('blur', (event) => {
+    const target = event.target;
+ 
+    if(target.getAttribute('data-open-menu') && target.getAttribute('data-open-menu') === 'open')
+    {
+        target.src = './assets/Menu.png';
+        target.setAttribute('data-open-menu', 'closed');
+ 
+        menuContainer.style['max-height'] = '0';
+        menuContainer.style['padding-top'] = '0';
+    }
 });
 
 document.addEventListener('scroll', () => {
@@ -42,19 +50,11 @@ document.addEventListener('scroll', () => {
 
     scrollStatusBar.style['width'] = roundedPercentage + '%';
 })
- 
-menuIcon.addEventListener('click', (event) => alternateMenu(event.target));
-menuIcon.addEventListener('blur', (event) => {
-    const target = event.target;
- 
-    if(target.getAttribute('data-open-menu') && target.getAttribute('data-open-menu') === 'open')
-    {
-        target.src = './assets/Menu.png';
-        target.setAttribute('data-open-menu', 'closed');
- 
-        menuContainer.style['max-height'] = '0';
-        menuContainer.style['padding-top'] = '0';
-    }
+
+inputList.forEach((element) => {
+    element.addEventListener('change', (event) => {
+        onInputChange(event.target);
+    })
 });
 
 formElement.addEventListener('submit', (event) => validateForm(event));
@@ -62,7 +62,6 @@ formElement.addEventListener('submit', (event) => validateForm(event));
 pricingSelector.addEventListener('change', (event) => onSelectChange(event.target));
 
 newsletterFormElement.addEventListener('submit', (event) => validateNewsletterForm(event));
-
 modalElement.addEventListener('click', () => closeModal());
 modalBoxElement.addEventListener('click', (event) => {
     event.stopPropagation();
