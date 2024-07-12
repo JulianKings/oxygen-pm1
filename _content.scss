@@ -2,7 +2,9 @@
 @use 'stats';
 @use 'cards';
 @use 'pricing';
+@use 'slider';
 @use 'question';
+@use 'scroll-top';
 
 @media only screen and (min-width: 1000px) {
     .content {

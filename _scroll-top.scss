@@ -1,0 +1,25 @@
+@use 'variables' as *;
+
+.scroll-top {
+    width: 100%;    
+    margin-top: 2.75rem;
+
+    &__button {
+        width: 90%;
+        max-width: 40ch;
+        display: block;
+        height: 3.56rem;
+        margin: 0 auto; 
+        color: white;
+        border: 0;
+        background-color: #08A6E4;
+        box-shadow: 0.31rem 0.63rem 0.88rem rgb(7, 172, 230, 0.29);
+        padding: 1rem 2.06rem;
+        border-radius: 2.19rem;
+
+        font-family: $open-sans;
+        font-size: 0.81rem;
+        font-weight: 700;
+        line-height: 1.11rem;
+    }
+}

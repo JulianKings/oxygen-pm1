@@ -35,6 +35,95 @@ body {
   font-family: "Raleway", "offline_raleway", "Roboto", sans-serif;
 }
 
+.modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5 !important;
+  pointer-events: auto;
+  display: none;
+}
+.modal__box {
+  position: absolute;
+  background-color: white;
+  border-radius: 0.25rem;
+  width: 90%;
+  top: 6rem;
+  left: 5%;
+  pointer-events: auto;
+  padding: 0.9rem 1.2rem;
+  animation: slideDown 1s ease-in-out;
+}
+.modal__box__close {
+  width: 100%;
+  text-align: right;
+}
+.modal__box__close img {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: 0;
+}
+.modal__box__title {
+  padding: 0 0.5rem;
+  font-weight: 300;
+  font-size: 2rem;
+  line-height: 2.31rem;
+  color: #08A6E4;
+}
+.modal__box__desc {
+  padding: 0 0.5rem;
+  padding-top: 0.6rem;
+}
+.modal__box__form {
+  margin-top: 1rem;
+  max-width: 70%;
+  padding: 0 0.5rem;
+}
+.modal__box__form__error {
+  display: none;
+  white-space: pre-line;
+  background-color: #500000;
+  color: white;
+  margin: 0.4rem 0.6rem;
+  padding: 0.4rem 0.4rem;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+@keyframes slideDown {
+  0% {
+    top: -20rem;
+  }
+  100% {
+    top: 6rem;
+  }
+}
+@keyframes slideUp {
+  0% {
+    top: 6rem;
+  }
+  100% {
+    top: -60rem;
+  }
+}
+#modal__box__form__button {
+  margin-left: 0;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 1000px) {
+  .modal__box {
+    width: 50%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 65ch;
+  }
+}
 .header {
   box-shadow: 0 0.19rem 0.38rem rgba(0, 0, 0, 0.29);
   width: 100%;
@@ -44,13 +133,28 @@ body {
   position: relative;
 }
 .header__scrollbar {
-  display: none;
   height: 0.19rem;
   width: 0%;
   background-color: #08A6E4;
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 50;
+}
+.header__return-top {
+  height: 2.5rem;
+  width: 2.5rem;
+  position: fixed;
+  bottom: 6.56rem;
+  right: 1rem;
+  z-index: 300;
+}
+.header__return-top--hidden {
+  visibility: hidden;
+}
+.header__return-top img {
+  width: 100%;
+  height: 100%;
 }
 .header__title {
   display: inline-block;
@@ -71,7 +175,12 @@ body {
   display: block;
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.8s ease-in-out;
+  padding-top: 0;
+  transition: max-height 0.8s ease-in-out, padding-top 0.3s ease-in-out;
+}
+.header__nav__list--open {
+  max-height: 40vh;
+  padding-top: 2.5rem;
 }
 .header__nav__img {
   margin-bottom: 0.25rem;
@@ -87,7 +196,7 @@ body {
   line-height: 0.94rem;
   text-transform: uppercase;
   color: #A5A5A5;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.88rem;
 }
 .nav__list__item:hover, .nav__list__item:active {
   color: black;
@@ -133,6 +242,10 @@ body {
     list-style-type: none;
     justify-content: space-between;
     align-items: stretch;
+  }
+  .header__nav__list--open {
+    padding-top: 0;
+    max-height: 50vh;
   }
   .header__nav--open {
     flex: 1 0 auto;
@@ -224,6 +337,7 @@ body {
   .sell-more__background {
     margin-top: -0.5rem;
     background: url("./assets/background.png") no-repeat;
+    background-size: cover;
     height: 37.13rem;
     background-position: center;
   }
@@ -543,8 +657,8 @@ body {
   .trumpet-fit {
     object-fit: cover;
     height: auto;
-    max-height: 100;
-    width: 100%;
+    max-height: 100rem;
+    width: 120%;
   }
   .macbook {
     max-height: 13.69rem;
@@ -570,6 +684,17 @@ body {
   text-align: center;
   margin-bottom: 0.88rem;
   margin-top: 3.38rem;
+}
+.pricing__unit-selector {
+  padding: 0.5rem 0.2rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.pricing__unit-selector__select {
+  margin: 0 auto;
+  border: 0;
+  background-color: white;
+  font-size: 1.1rem;
 }
 .pricing__card {
   font-family: "Open Sans", "offline_open_sans", "Roboto", sans-serif;
@@ -741,6 +866,90 @@ body {
     width: 100%;
   }
 }
+.slider {
+  margin: 1.2rem 0;
+  width: 100%;
+  margin-top: 1.56rem;
+}
+.slider__container {
+  width: 90%;
+  max-width: 95ch;
+  margin: 0 auto;
+  position: relative;
+  height: 38rem;
+  overflow-x: hidden;
+}
+.slider__container img {
+  width: 100%;
+  height: 38rem;
+  z-index: 0;
+  position: absolute;
+}
+.slider__container__dots {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 30;
+}
+.slider__container__dot {
+  display: inline-block;
+  height: 0.75rem;
+  width: 0.75rem;
+  border-radius: 10rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 0.6rem 0.25rem;
+  transition: all 0.6s ease-in-out;
+  cursor: pointer;
+}
+.slider__container__arrow {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  margin: auto 0;
+  height: 3.5rem;
+  width: 3.5rem;
+  color: white;
+  background-color: black;
+  border-radius: 10rem;
+  left: 0.8rem;
+  z-index: 40;
+  font-size: 2.3rem;
+  font-weight: 400;
+  padding-left: 1rem;
+  border: 0.13rem solid white;
+  cursor: pointer;
+}
+.slider__container__arrow--right {
+  left: 0;
+  margin-left: auto;
+  margin-right: 0.8rem;
+  padding-left: 1.1rem;
+  right: 0;
+}
+
+@keyframes slideLeft {
+  0% {
+    left: -120vw;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes slideRight {
+  0% {
+    right: -120vw;
+  }
+  100% {
+    right: 0;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .slider {
+    max-width: 115ch;
+    margin-top: 9.56rem;
+  }
+}
 .question {
   width: 100%;
   padding: 0 1.95rem;
@@ -777,6 +986,18 @@ body {
 .question__form {
   margin-top: 2.87rem;
 }
+.question__form__error {
+  display: none;
+  white-space: pre-line;
+  background-color: #500000;
+  color: white;
+  margin: 0.4rem 0.6rem;
+  padding: 0.4rem 0.4rem;
+  font-size: 0.8rem;
+  line-height: 1.1rem;
+  border-radius: 0.25rem;
+  margin-bottom: 1.5rem;
+}
 .question__label {
   display: block;
   text-transform: uppercase;
@@ -795,7 +1016,14 @@ body {
   color: #95989A;
   margin-bottom: 2.56rem;
   padding: 0.4rem 0.2rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
+}
+.question__input__error {
+  border-color: #ce0000;
+  padding-right: 2rem;
+}
+.question__input__error:focus {
+  border-color: #ce0000;
 }
 .question__input--last {
   margin-bottom: 1.94rem;
@@ -836,9 +1064,6 @@ body {
   color: #707070;
   padding-left: 0.4rem;
 }
-.question__checkbox__input {
-  display: none;
-}
 .question__checkbox__input + label {
   display: inline-block;
   width: 1.5rem;
@@ -861,6 +1086,12 @@ body {
   position: absolute;
   top: 0.38rem;
   left: 0.38rem;
+}
+.question__checkbox__input {
+  display: none;
+}
+.question__checkbox__input__error + label {
+  border: 0.06rem solid #ce0000;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -891,6 +1122,43 @@ body {
   .question__input--last {
     margin-bottom: 1.88rem;
   }
+  .question__input__container {
+    position: relative;
+  }
+  .question__input__error {
+    border-color: #ce0000;
+    padding-right: 2rem;
+  }
+  .question__input__error:focus {
+    border-color: #ce0000;
+  }
+  .question__input__error + span::before {
+    position: absolute;
+    content: url("./assets/alert-triangle.svg");
+    width: 0.94rem;
+    height: 0.94rem;
+    padding: 0.2rem;
+    padding-left: 4%;
+    font-size: 0.7rem;
+    right: 1.45rem;
+    top: 0rem;
+    border-radius: 0.25rem;
+  }
+  .question__input__valid {
+    padding-right: 2rem;
+  }
+  .question__input__valid + span::before {
+    position: absolute;
+    content: url("./assets/check.svg");
+    width: 1.25rem;
+    height: 1.25rem;
+    padding: 0.2rem;
+    padding-left: 4%;
+    font-size: 0.7rem;
+    right: 1.1rem;
+    top: 0.05rem;
+    border-radius: 0.25rem;
+  }
   .question__button {
     margin-top: 1.25rem;
   }
@@ -906,6 +1174,28 @@ body {
     margin-top: 0;
   }
 }
+.scroll-top {
+  width: 100%;
+  margin-top: 2.75rem;
+}
+.scroll-top__button {
+  width: 90%;
+  max-width: 40ch;
+  display: block;
+  height: 3.56rem;
+  margin: 0 auto;
+  color: white;
+  border: 0;
+  background-color: #08A6E4;
+  box-shadow: 0.31rem 0.63rem 0.88rem rgba(7, 172, 230, 0.29);
+  padding: 1rem 2.06rem;
+  border-radius: 2.19rem;
+  font-family: "Open Sans", "offline_open_sans", "Roboto", sans-serif;
+  font-size: 0.81rem;
+  font-weight: 700;
+  line-height: 1.11rem;
+}
+
 @media only screen and (min-width: 1000px) {
   .content {
     display: flex;

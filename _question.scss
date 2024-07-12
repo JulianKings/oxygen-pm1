@@ -39,6 +39,19 @@
 
     &__form {
         margin-top: 2.87rem;
+
+        &__error {
+            display: none;
+            white-space: pre-line;
+            background-color: #500000;
+            color: white;
+            margin: 0.4rem 0.6rem;
+            padding: 0.4rem 0.4rem;
+            font-size: 0.8rem;
+            line-height: 1.1rem;
+            border-radius: 0.25rem;
+            margin-bottom: 1.5rem;
+        }
     }
 
     &__label {
@@ -60,7 +73,17 @@
         color: #95989A;
         margin-bottom: 2.56rem;
         padding: 0.4rem 0.2rem;
-        font-size: 1rem;
+        font-size: 0.9rem;
+
+        &__error
+        {
+            border-color: #ce0000;
+            padding-right: 2rem;
+
+            &:focus {
+                border-color: #ce0000;
+            }
+        }
 
         &--last {
             margin-bottom: 1.94rem;
@@ -111,10 +134,6 @@
             padding-left: 0.4rem;
         }
 
-        &__input {
-            display: none;
-        }
-
         &__input + label {
             display: inline-block;
             width: 1.5rem;
@@ -138,6 +157,14 @@
                 position: absolute;
                 top: 0.38rem;
                 left: 0.38rem;
+            }
+        }
+
+        &__input {
+            display: none;            
+
+            &__error + label {
+                border: 0.06rem solid #ce0000;
             }
         }
     }
@@ -175,6 +202,51 @@
 
             &--last {
                 margin-bottom: 1.88rem;
+            }
+
+            &__container {
+                position: relative;
+            }
+
+            &__error
+            {
+                border-color: #ce0000;
+                padding-right: 2rem;
+
+                &:focus {
+                    border-color: #ce0000;
+                }
+
+                & + span::before {
+                    position: absolute;
+                    content: url("./assets/alert-triangle.svg");
+                    width: 0.94rem;
+                    height: 0.94rem;
+                    padding: 0.2rem;
+                    padding-left: 4%;
+                    font-size: 0.7rem;
+                    right: 1.45rem;
+                    top: 0rem;
+                    border-radius: 0.25rem;
+                }
+            }
+        
+            &__valid
+            {
+                padding-right: 2rem;
+
+                & + span::before {
+                    position: absolute;
+                    content: url("./assets/check.svg");
+                    width: 1.25rem;
+                    height: 1.25rem;
+                    padding: 0.2rem;
+                    padding-left: 4%;
+                    font-size: 0.7rem;
+                    right: 1.1rem;
+                    top: 0.05rem;
+                    border-radius: 0.25rem;
+                }
             }
         }
 

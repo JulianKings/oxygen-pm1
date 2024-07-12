@@ -9,13 +9,31 @@
     position: relative;
 
     &__scrollbar {
-        display: none;
         height: 0.19rem;
         width: 0%;
         background-color: #08A6E4;
         position: fixed;
         top: 0;
         left: 0;
+        z-index: 50;
+    }
+
+    &__return-top {
+        height: 2.5rem;
+        width: 2.5rem;
+        position: fixed;
+        bottom: 6.56rem;
+        right: 1rem;
+        z-index: 300;
+
+        &--hidden {
+            visibility: hidden;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+        }
     }
 
     &__title {
@@ -38,8 +56,14 @@
             display: block;
             max-height: 0;
             overflow: hidden;
+            padding-top: 0;
 
-            transition: max-height 0.8s ease-in-out;
+            transition: max-height 0.8s ease-in-out, padding-top 0.3s ease-in-out;
+
+            &--open {
+                max-height: 40vh;
+                padding-top: 2.5rem;
+            }
         }
 
         &__img {
@@ -58,7 +82,7 @@
     line-height: 0.94rem;
     text-transform: uppercase;
     color: #A5A5A5;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.88rem;
 
     &:hover, &:active {
         color: black;
@@ -108,7 +132,12 @@
                 display: flex;
                 list-style-type: none;
                 justify-content: space-between;
-                align-items: stretch;                
+                align-items: stretch;    
+                
+                &--open {
+                    padding-top: 0;
+                    max-height: 50vh;
+                }
             }
 
             &--open {

@@ -6,11 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 
+    <script type="text/javascript" src='./js/openMenu.js' defer></script>
+    <script type="text/javascript" src='./js/scroll.js' defer></script>
+    <script type="text/javascript" src='./js/returnTop.js' defer></script>
+    <script type="text/javascript" src='./js/formValidation.js' defer></script>
+    <script type="text/javascript" src='./js/modal.js' defer></script>
+    <script type="text/javascript" src='./js/unitManager.js' defer></script>
+    <script type="text/javascript" src='./js/slider.js' defer></script>
+
     <title>Oxygen Shop</title>
 </head>
 <body>
+    <aside class="modal">
+        <div class="modal__box">
+            <div class="modal__box__close">
+                <img src="./assets/cross.png" alt="Close" onclick="closeModal();" />
+            </div>
+            <div class="modal__box__title">Subscribe to our newsletter!</div>
+            <div class="modal__box__desc">Subscribe to our newsletter to be in touch with the latest advances in technology.</div>
+            <div class="modal__box__form">
+                <form method="post" action="" id="newsletter-form">
+                    <div class="modal__box__form__error"></div>                    
+                    <label for="newsletter-mail" class="question__label">Email</label>
+                    <div class="question__input__container">
+                        <input id="newsletter-mail" type="text" class="question__input modal__box__form__input question__input--last" />
+                        <span></span>
+                    </div>
+
+                    <button type="submit" id="modal__box__form__button" class="question__button">Send</button>
+                </form>
+            </div>
+        </div>
+    </aside>
+
     <header class="header">
         <div class="header__scrollbar"></div>
+        <div class="header__return-top">
+            <img src="./assets/arrow-up-circle.svg" alt="Return to the top" onclick="scrollToTop();" />
+        </div>
         <div class="header__title"><span>OXYGENShop</span></div>
         <nav class="header__nav">
             <img src="./assets/Menu.png" class="header__nav__img" tabindex="1" alt="Menu" />
@@ -99,6 +132,13 @@
         </section>
         <section class="pricing">
             <p class="pricing__title">Pricing</p>
+            <div class="pricing__unit-selector">
+                <select id="unit-selector" class="pricing__unit-selector__select">
+                    <option value="usd" default>USD</option>
+                    <option value="eur" default>EUR</option>
+                    <option value="gbp" default>GBP</option>
+                </select>
+            </div>
             <div class="pricing__container">
                 <div class="pricing__card pricing__card--primary">
                     <div class="pricing__card__price">
@@ -158,6 +198,18 @@
                 </div>
             </div>
         </section>
+        <section class="slider">
+            <div id="slider" class="slider__container">
+                <img src="./assets/slider1.jpeg" alt="slider image" />
+                <img src="./assets/slider2.jpg" alt="slider image" />
+                <img src="./assets/slider3.jpg" alt="slider image" />
+                <img src="./assets/slider4.jpg" alt="slider image" />
+                <img src="./assets/slider5.jpg" alt="slider image" />
+                <img src="./assets/slider6.jpg" alt="slider image" />
+                <img src="./assets/slider7.jpg" alt="slider image" />
+                <img src="./assets/slider8.jpg" alt="slider image" />
+            </div>
+        </section>
         <section class="question">
             <div class="question__information">
                 <p class="question__title">Any questions?</p>
@@ -168,19 +220,32 @@
             </div>
 
             <div class="question__form">
-                <label for="contact-name" class="question__label">Name</label>
-                <input id="contact-name" type="text" class="question__input" />
+                <form method="post" action="" id="question-form">
+                    <div class="question__form__error"></div>
 
-                <label for="contact-mail" class="question__label">Email</label>
-                <input id="contact-mail" type="text" class="question__input question__input--last" />
+                    <label for="contact-name" class="question__label">Name</label>
+                    <div class="question__input__container">
+                        <input id="contact-name" type="text" class="question__input" minlength="2" maxlength="100" />
+                        <span></span>
+                    </div>
+                    
+                    <label for="contact-mail" class="question__label">Email</label>
+                    <div class="question__input__container">
+                        <input id="contact-mail" type="text" class="question__input question__input--last" />
+                        <span></span>
+                    </div>
 
-                <div class="question__checkbox">
-                    <input type="checkbox" class="question__checkbox__input" id="contact-consent" /><label for="contact-consent" class="question__checkbox__label"></label>
-                    <label for="contact-consent" class="question__checkbox__label-text">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</label>
-                </div>
+                    <div class="question__checkbox">
+                        <input type="checkbox" class="question__checkbox__input" id="contact-consent" /><label for="contact-consent" class="question__checkbox__label"></label>
+                        <label for="contact-consent" class="question__checkbox__label-text">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive)</label>
+                    </div>
 
-                <button type="button" class="question__button">Send</button>
+                    <button type="submit" class="question__button">Send</button>
+                </form>
             </div>
+        </section>
+        <section class="scroll-top">
+            <button type="button" class="scroll-top__button" onclick="scrollToTop();">Return to the top</button>
         </section>
     </main>
     <footer class="footer">
