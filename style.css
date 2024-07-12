@@ -1007,11 +1007,11 @@ body {
   font-size: 0.9rem;
 }
 .question__input__error {
-  border-color: #500000;
+  border-color: #ce0000;
   padding-right: 2rem;
 }
 .question__input__error:focus {
-  border-color: #500000;
+  border-color: #ce0000;
 }
 .question__input--last {
   margin-bottom: 1.94rem;
@@ -1079,7 +1079,7 @@ body {
   display: none;
 }
 .question__checkbox__input__error + label {
-  border: 0.06rem solid #500000;
+  border: 0.06rem solid #ce0000;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -1114,11 +1114,11 @@ body {
     position: relative;
   }
   .question__input__error {
-    border-color: #500000;
+    border-color: #ce0000;
     padding-right: 2rem;
   }
   .question__input__error:focus {
-    border-color: #500000;
+    border-color: #ce0000;
   }
   .question__input__error + span::before {
     position: absolute;

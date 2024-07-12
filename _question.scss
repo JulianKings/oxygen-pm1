@@ -77,11 +77,11 @@
 
         &__error
         {
-            border-color: #500000;
+            border-color: #ce0000;
             padding-right: 2rem;
 
             &:focus {
-                border-color: #500000
+                border-color: #ce0000;
             }
         }
 
@@ -164,7 +164,7 @@
             display: none;            
 
             &__error + label {
-                border: 0.06rem solid #500000;
+                border: 0.06rem solid #ce0000;
             }
         }
     }
@@ -210,11 +210,11 @@
 
             &__error
             {
-                border-color: #500000;
+                border-color: #ce0000;
                 padding-right: 2rem;
 
                 &:focus {
-                    border-color: #500000
+                    border-color: #ce0000;
                 }
 
                 & + span::before {

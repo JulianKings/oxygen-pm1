@@ -168,6 +168,15 @@ function validateForm(event)
         })
         .then((response) => {
             console.log(response);
+            let result = 'Form send successfully: \n';
+            for (const key in response)
+            {
+                if(response.hasOwnProperty(key))
+                {
+                    result += key + ': ' + response[key] + '\n';
+                }
+            }
+            alert(result);
          })
         .catch((error) => {
             throw new Error(error);
@@ -182,11 +191,8 @@ function runValidation(elementArray)
         // handle name
         if(target.id === 'contact-name')
         {
-            if(validateName(target.value))
+            if(!validateName(target.value))
             {
-                target.classList.add('question__input__valid');
-                cleanupErrors(target.id);
-            } else {
                 validationResult = false;
                 target.classList.add('question__input__error');
                 cleanupErrors(target.id);
@@ -194,6 +200,18 @@ function runValidation(elementArray)
                     origin_id: target.id,
                     message: 'Name must be between 2 and 100 characters'
                 });
+            } else if(!validateNameNumbers(target.value))
+            {
+                validationResult = false;
+                target.classList.add('question__input__error');
+                cleanupErrors(target.id);
+                errorList.push({
+                    origin_id: target.id,
+                    message: 'Digits are not allowed in your name'
+                });
+            } else {
+                target.classList.add('question__input__valid');
+                cleanupErrors(target.id);
             }
         }
     
@@ -287,6 +305,11 @@ function validateName(name)
     }
 
     return false;
+}
+
+function validateNameNumbers(name)
+{
+    return !((/[0-9]/.test(name)));
 }
 
 function validateEmail(mail)
