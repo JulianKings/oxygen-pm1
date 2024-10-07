@@ -16,3 +16,9 @@ document.addEventListener('scroll', () => {
 
     scrollStatusBar.style['width'] = roundedPercentage + '%';
 });
+
+function scrollToSection(section)
+{
+    const scrollObjetive = document.querySelector('.' + section);
+    scrollObjetive.scrollIntoView();
+}
